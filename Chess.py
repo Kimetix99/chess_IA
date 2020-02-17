@@ -3,6 +3,7 @@ from Board import *
 from Game import *
 import math 
 
+
 class Chess:
 
     def __init__(self,window):

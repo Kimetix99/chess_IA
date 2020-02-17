@@ -5,7 +5,8 @@ class Pawn(Pice):
     
     def __init__(self, id, side, figure, alive, posY, posX):
         super(Pawn, self).__init__(id, side, figure, alive, posY, posX)
-        self.init_pos=True
+        self.init_pos = True
+        self.value = 1
 
     def get_possible_moves(self, board):
         moves=[]

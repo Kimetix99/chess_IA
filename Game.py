@@ -1,6 +1,7 @@
 from Board import *
 from Chess import *
 from Player import *
+from ChessBot import *
 
 class Game:
 
@@ -9,27 +10,31 @@ class Game:
         self.board = board
         self.player1 = Player('1','white')
         self.player2 = Player('2','black')
+        self.chessboot = ChessBot(self.board)
         self.turn = self.player1
 
     def start_game(self):
         self.chess.board.bind("<Button-1>", self.click_handler)
 
     def click_handler(self,event):
-        posX = self.chess.size_to_x_coordinates(event.x)
-        posY = self.chess.size_to_y_coordinates(event.y)
-        if self.board.containsPlayerPice(posX, posY, self.turn) and not self.board.isMoveCell(posX,posY):
-            self.clean_board_moves()
-            self.board.actualizeMoves(posX, posY)
-        elif self.board.isMoveCell(posX,posY) and not self.board.containsPlayerPice(posX, posY, self.turn):
-            self.board.movePice(posX,posY)
-            self.clean_board_moves()
-            self.changeTurn()
-        elif self.board.containsPlayerPice(posX, posY, self.turn) and self.board.isMoveCell(posX,posY):
-            self.board.movePice(posX,posY)
-            self.clean_board_moves()
-            self.changeTurn()
-        else:
-            self.clean_board_moves()
+        if self.turn.equals(self.player1):
+            posX = self.chess.size_to_x_coordinates(event.x)
+            posY = self.chess.size_to_y_coordinates(event.y)
+            if self.board.containsPlayerPice(posX, posY, self.turn) and not self.board.isMoveCell(posX,posY):
+                self.clean_board_moves()
+                self.board.actualizeMoves(posX, posY)
+            elif self.board.isMoveCell(posX,posY) and not self.board.containsPlayerPice(posX, posY, self.turn):
+                self.board.movePice(posX,posY)
+                self.clean_board_moves()
+                self.changeTurn()
+            elif self.board.containsPlayerPice(posX, posY, self.turn) and self.board.isMoveCell(posX,posY):
+                self.board.movePice(posX,posY)
+                self.clean_board_moves()
+                self.changeTurn()
+            else:
+                self.clean_board_moves()
+        self.board = self.chessboot.minimax(3,0,False,self.board,self.chessboot.evaluation(self.board.board))
+        self.changeTurn()
         if self.check_end_of_game():
             self.chess.window.destroy()
         self.reset_board()

@@ -5,6 +5,7 @@ class Queen(Pice):
     
     def __init__(self, id, side, figure, alive, posY, posX):
         super(Queen, self).__init__(id, side, figure, alive, posY, posX)
+        self.value = 9
 
     def get_possible_moves(self, board):
         moves=[]

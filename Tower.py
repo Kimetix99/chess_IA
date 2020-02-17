@@ -6,6 +6,7 @@ class Tower(Pice):
     def __init__(self, id, side, figure, alive, posY, posX):
         super(Tower, self).__init__(id, side, figure, alive, posY, posX)
         self.init_pos = True
+        self.value = 5
 
     def get_possible_moves(self, board):
         moves=[]
