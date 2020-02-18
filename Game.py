@@ -32,7 +32,7 @@ class Game:
             self.reset_board()
         if self.turn.equals(self.player2):
             chessboot = ChessBot(self.board)
-            self.board=chessboot.bot_move()[0]
+            self.board=chessboot.bot_move()
             self.changeTurn()
             self.reset_board()
         if self.check_end_of_game():

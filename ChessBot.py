@@ -7,8 +7,13 @@ import sys
 class ChessBot:
 
     def __init__(self,board):
-        self.board=board
-        self.RAMIFICATION_FACTOR=50
+        self.board = board
+        self.RAMIFICATION_FACTOR = 50
+
+    class Node:
+        def __init__(self, board, value):
+            self.board=board
+            self.value=value
 
     def evaluation(self, board):
         value = 0
@@ -35,8 +40,8 @@ class ChessBot:
         boards=[]
         for i in range(self.RAMIFICATION_FACTOR):
             neightbor=self.get_neightbor(self.board,'black')
-            boards.append((neightbor, self.minimax(2, False, neightbor, -sys.maxsize, sys.maxsize)))
-        return min(boards, key = lambda t: t[1])
+            boards.append(self.Node(neightbor,self.minimax(2, False, neightbor, -sys.maxsize, sys.maxsize)))
+        return min(boards, key = lambda t: t.value).board
         
 
     def minimax(self, depth, maxTurn, board, alpha, beta):
@@ -61,9 +66,3 @@ class ChessBot:
                 if beta <= alpha:
                     break
             return minEval
-
-            
-            
-        
-        
-
