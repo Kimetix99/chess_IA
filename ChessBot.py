@@ -39,7 +39,6 @@ class ChessBot:
         return current_board
 
     def bot_move(self):
-        
         threads_response=[]
         charge = self.charge_balance()
         
@@ -49,7 +48,6 @@ class ChessBot:
                 neightbor=self.get_neightbor(self.board,'black')
                 boards.append(self.Node(neightbor,self.minimax(2, False, neightbor, -sys.maxsize, sys.maxsize, self_charge)))
             threads_response.append(min(boards, key = lambda t: t.value))
-        
         
         threads=[threading.Thread(target=move_conc, args=(charge[i],), daemon = True) for i in range(self.NUM_THREADS)]
         for t in range(len(threads)):
