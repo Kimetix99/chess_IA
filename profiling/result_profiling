@@ -1,6 +1,6 @@
-Tue Feb 18 16:54:26 2020    output_profiling
+Tue Feb 18 19:43:22 2020    output_profiling
 
-         31950511 function calls (26115341 primitive calls) in 12.936 seconds
+         86946092 function calls (70981114 primitive calls) in 27.965 seconds
 
    Ordered by: standard name
 
@@ -12,8 +12,8 @@ Tue Feb 18 16:54:26 2020    output_profiling
        28    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:157(_get_module_lock)
        27    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:176(cb)
         1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:194(_lock_unlock_module)
-     35/3    0.000    0.000    0.009    0.003 <frozen importlib._bootstrap>:211(_call_with_frames_removed)
-      223    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
+     36/3    0.000    0.000    0.010    0.003 <frozen importlib._bootstrap>:211(_call_with_frames_removed)
+      225    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
         6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:232(_requires_builtin_wrapper)
        27    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:307(__init__)
        27    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:311(__enter__)
@@ -28,7 +28,7 @@ Tue Feb 18 16:54:26 2020    output_profiling
        27    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:504(_init_module_attrs)
        27    0.000    0.000    0.003    0.000 <frozen importlib._bootstrap>:564(module_from_spec)
        27    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:58(__init__)
-     27/3    0.000    0.000    0.011    0.004 <frozen importlib._bootstrap>:651(_load_unlocked)
+     27/3    0.000    0.000    0.012    0.004 <frozen importlib._bootstrap>:651(_load_unlocked)
        27    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:707(find_spec)
         6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:728(create_module)
         6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:736(exec_module)
@@ -37,10 +37,11 @@ Tue Feb 18 16:54:26 2020    output_profiling
        21    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:780(find_spec)
        69    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:843(__enter__)
        69    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:847(__exit__)
-       27    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:870(_find_spec)
-     27/3    0.000    0.000    0.011    0.004 <frozen importlib._bootstrap>:936(_find_and_load_unlocked)
-     27/3    0.000    0.000    0.011    0.004 <frozen importlib._bootstrap>:966(_find_and_load)
+       27    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap>:870(_find_spec)
+     27/3    0.000    0.000    0.012    0.004 <frozen importlib._bootstrap>:936(_find_and_load_unlocked)
+     27/3    0.000    0.000    0.012    0.004 <frozen importlib._bootstrap>:966(_find_and_load)
        49    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:997(_handle_fromlist)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:106(_write_atomic)
         2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1067(_path_hooks)
        44    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1080(_path_importer_cache)
        21    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:1117(_get_spec)
@@ -53,119 +54,123 @@ Tue Feb 18 16:54:26 2020    output_profiling
         2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1322(path_hook_for_FileFinder)
        38    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:263(cache_from_source)
        21    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:361(_get_cached)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:373(_calc_mode)
        19    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:393(_check_name_wrapper)
        37    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:41(_relax_case)
        19    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:430(_validate_bytecode_header)
-       19    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap_external>:485(_compile_bytecode)
-       38    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:52(_r_long)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:47(_w_long)
+       18    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap_external>:485(_compile_bytecode)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:497(_code_to_bytecode)
+       37    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:52(_r_long)
        21    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:524(spec_from_file_location)
       197    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:57(_path_join)
       197    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:59(<listcomp>)
-       38    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:63(_path_split)
+       39    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:63(_path_split)
        19    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:669(create_module)
-     19/3    0.000    0.000    0.011    0.004 <frozen importlib._bootstrap_external>:672(exec_module)
+     19/3    0.000    0.000    0.012    0.004 <frozen importlib._bootstrap_external>:672(exec_module)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:735(source_to_code)
        19    0.000    0.000    0.003    0.000 <frozen importlib._bootstrap_external>:743(get_code)
-       82    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:75(_path_stat)
+       84    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:75(_path_stat)
        19    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:800(__init__)
        19    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:825(get_filename)
-       19    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:830(get_data)
+       20    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:830(get_data)
        19    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:840(path_stats)
-       26    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:85(_path_is_mode_type)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:845(_cache_bytecode)
+       27    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:85(_path_is_mode_type)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:850(set_data)
         2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:908(__init__)
-        2    0.000    0.000    0.002    0.001 <frozen importlib._bootstrap_external>:919(create_module)
+        2    0.000    0.000    0.003    0.001 <frozen importlib._bootstrap_external>:919(create_module)
         2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:927(exec_module)
        24    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:94(_path_isfile)
-        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:99(_path_isdir)
+        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:99(_path_isdir)
         1    0.000    0.000    0.000    0.000 <string>:1(<module>)
         1    0.000    0.000    0.000    0.000 Bishop.py:1(<module>)
-      364    0.001    0.000    0.002    0.000 Bishop.py:10(get_possible_moves)
-      364    0.001    0.000    0.001    0.000 Bishop.py:18(move_up_left)
-      364    0.000    0.000    0.000    0.000 Bishop.py:28(move_up_right)
-      364    0.000    0.000    0.000    0.000 Bishop.py:38(move_down_left)
+      890    0.001    0.000    0.004    0.000 Bishop.py:10(get_possible_moves)
+      890    0.001    0.000    0.001    0.000 Bishop.py:18(move_up_left)
+      890    0.001    0.000    0.001    0.000 Bishop.py:28(move_up_right)
+      890    0.001    0.000    0.001    0.000 Bishop.py:38(move_down_left)
         1    0.000    0.000    0.000    0.000 Bishop.py:4(Bishop)
-      364    0.000    0.000    0.000    0.000 Bishop.py:48(move_down_right)
+      890    0.000    0.000    0.000    0.000 Bishop.py:48(move_down_right)
         4    0.000    0.000    0.000    0.000 Bishop.py:6(__init__)
         1    0.000    0.000    0.001    0.001 Board.py:1(<module>)
-      930    0.007    0.000    0.008    0.000 Board.py:104(get_black_pices)
-     1858    0.015    0.000    0.017    0.000 Board.py:112(get_white_pices)
+     2552    0.001    0.000    0.001    0.000 Board.py:102(check_kings_alive)
+     5146    0.004    0.000    0.005    0.000 Board.py:105(king_dies)
         1    0.000    0.000    0.000    0.000 Board.py:12(Board)
         1    0.000    0.000    0.000    0.000 Board.py:14(__init__)
-        3    0.000    0.000    0.000    0.000 Board.py:29(containsPlayerPice)
-        2    0.000    0.000    0.000    0.000 Board.py:32(isMoveCell)
-        1    0.000    0.000    0.000    0.000 Board.py:35(actualizeMoves)
-        1    0.000    0.000    0.000    0.000 Board.py:40(movePice)
-     2104    0.002    0.000    0.011    0.000 Board.py:44(move_to_destination)
-     2104    0.002    0.000    0.002    0.000 Board.py:51(check_init_pos)
-     2104    0.004    0.000    0.007    0.000 Board.py:72(replace_pice)
-     2104    0.001    0.000    0.001    0.000 Board.py:85(pawn_reaches_final)
-      932    0.000    0.000    0.000    0.000 Board.py:89(check_kings_alive)
-     2104    0.002    0.000    0.002    0.000 Board.py:92(king_dies)
-        1    0.000    0.000   12.936   12.936 Chess.py:1(<module>)
+        3    0.000    0.000    0.000    0.000 Board.py:36(containsPlayerPice)
+        2    0.000    0.000    0.000    0.000 Board.py:39(isMoveCell)
+        1    0.000    0.000    0.000    0.000 Board.py:42(actualizeMoves)
+     5146    0.006    0.000    0.030    0.000 Board.py:47(movePice)
+       17    0.000    0.000    0.000    0.000 Board.py:58(kill_pice)
+     5129    0.005    0.000    0.006    0.000 Board.py:64(check_init_pos)
+     5146    0.010    0.000    0.017    0.000 Board.py:85(replace_pice)
+     5146    0.002    0.000    0.002    0.000 Board.py:98(pawn_reaches_final)
+        1    0.000    0.000   27.965   27.965 Chess.py:1(<module>)
         1    0.000    0.000    0.000    0.000 Chess.py:10(__init__)
         4    0.000    0.000    0.005    0.001 Chess.py:22(create_board)
-        4    0.002    0.000    0.083    0.021 Chess.py:45(display_pices)
+        4    0.002    0.000    0.081    0.020 Chess.py:45(display_pices)
       132    0.000    0.000    0.000    0.000 Chess.py:65(x_coordinates_to_size)
       132    0.000    0.000    0.000    0.000 Chess.py:68(y_coordinates_to_size)
         2    0.000    0.000    0.000    0.000 Chess.py:71(size_to_x_coordinates)
         2    0.000    0.000    0.000    0.000 Chess.py:74(size_to_y_coordinates)
         1    0.000    0.000    0.000    0.000 Chess.py:8(Chess)
-        1    0.000    0.000    0.003    0.003 ChessBot.py:1(<module>)
-     1858    0.017    0.000    0.017    0.000 ChessBot.py:12(evaluation)
-     2788    0.025    0.000    4.311    0.002 ChessBot.py:23(get_neightbor)
-        1    0.000    0.000    8.563    8.563 ChessBot.py:36(bot_move)
-       30    0.000    0.000    0.000    0.000 ChessBot.py:41(<lambda>)
-  2788/30    0.043    0.000    8.514    0.284 ChessBot.py:44(minimax)
+        1    0.000    0.000    0.004    0.004 ChessBot.py:1(<module>)
+     4950    0.015    0.000    0.015    0.000 ChessBot.py:13(evaluation)
+     7500    0.063    0.000   11.733    0.002 ChessBot.py:21(get_neightbor)
+        1    0.000    0.000   23.360   23.360 ChessBot.py:34(bot_move)
+       50    0.000    0.000    0.000    0.000 ChessBot.py:39(<lambda>)
+  7500/50    0.116    0.000   23.279    0.466 ChessBot.py:42(minimax)
         1    0.000    0.000    0.000    0.000 ChessBot.py:7(ChessBot)
         1    0.000    0.000    0.000    0.000 ChessBot.py:9(__init__)
-        1    0.000    0.000    0.004    0.004 Game.py:1(<module>)
+        1    0.000    0.000    0.005    0.005 Game.py:1(<module>)
         1    0.000    0.000    0.000    0.000 Game.py:15(start_game)
-        2    0.000    0.000    8.637    4.319 Game.py:18(click_handler)
-        2    0.000    0.000    0.000    0.000 Game.py:40(changeTurn)
-        3    0.000    0.000    0.073    0.024 Game.py:46(reset_board)
-        2    0.000    0.000    0.000    0.000 Game.py:50(clean_board_moves)
-        2    0.000    0.000    0.000    0.000 Game.py:55(check_end_of_game)
+        2    0.000    0.000   23.432   11.716 Game.py:18(click_handler)
+        2    0.000    0.000    0.000    0.000 Game.py:41(changeTurn)
+        3    0.000    0.000    0.071    0.024 Game.py:47(reset_board)
+        2    0.000    0.000    0.000    0.000 Game.py:51(clean_board_moves)
+        2    0.000    0.000    0.000    0.000 Game.py:56(check_end_of_game)
         1    0.000    0.000    0.000    0.000 Game.py:6(Game)
         1    0.000    0.000    0.000    0.000 Game.py:8(__init__)
         1    0.000    0.000    0.000    0.000 Horse.py:1(<module>)
-      356    0.001    0.000    0.003    0.000 Horse.py:10(get_possible_moves)
-      356    0.001    0.000    0.001    0.000 Horse.py:22(move_up_left)
-      356    0.000    0.000    0.000    0.000 Horse.py:32(move_up_right)
+      969    0.003    0.000    0.009    0.000 Horse.py:10(get_possible_moves)
+      969    0.001    0.000    0.002    0.000 Horse.py:22(move_up_left)
+      969    0.001    0.000    0.001    0.000 Horse.py:32(move_up_right)
         1    0.000    0.000    0.000    0.000 Horse.py:4(Horse)
-      356    0.000    0.000    0.000    0.000 Horse.py:42(move_down_left)
-      356    0.000    0.000    0.000    0.000 Horse.py:53(move_down_right)
+      969    0.001    0.000    0.001    0.000 Horse.py:42(move_down_left)
+      969    0.001    0.000    0.001    0.000 Horse.py:53(move_down_right)
         4    0.000    0.000    0.000    0.000 Horse.py:6(__init__)
-      356    0.000    0.000    0.000    0.000 Horse.py:63(move_left_up)
-      356    0.000    0.000    0.000    0.000 Horse.py:73(move_right_up)
-      356    0.000    0.000    0.000    0.000 Horse.py:83(move_left_down)
-      356    0.000    0.000    0.000    0.000 Horse.py:93(move_right_down)
+      969    0.000    0.000    0.000    0.000 Horse.py:63(move_left_up)
+      969    0.000    0.000    0.000    0.000 Horse.py:73(move_right_up)
+      969    0.000    0.000    0.000    0.000 Horse.py:83(move_left_down)
+      969    0.000    0.000    0.000    0.000 Horse.py:93(move_right_down)
         1    0.000    0.000    0.000    0.000 King.py:1(<module>)
-      173    0.000    0.000    0.000    0.000 King.py:104(enrock)
-      173    0.000    0.000    0.000    0.000 King.py:108(enrock_left_tower)
-      173    0.000    0.000    0.000    0.000 King.py:115(enrock_right_tower)
-      173    0.001    0.000    0.002    0.000 King.py:13(get_possible_moves)
-      173    0.000    0.000    0.000    0.000 King.py:26(move_up)
-      173    0.000    0.000    0.000    0.000 King.py:35(move_left)
-      173    0.000    0.000    0.000    0.000 King.py:44(move_right)
-      173    0.000    0.000    0.000    0.000 King.py:53(move_down)
+      468    0.000    0.000    0.001    0.000 King.py:104(enrock)
+      468    0.000    0.000    0.001    0.000 King.py:108(enrock_left_tower)
+      468    0.000    0.000    0.000    0.000 King.py:115(enrock_right_tower)
+      468    0.002    0.000    0.005    0.000 King.py:13(get_possible_moves)
+      468    0.000    0.000    0.000    0.000 King.py:26(move_up)
+      468    0.000    0.000    0.000    0.000 King.py:35(move_left)
+      468    0.000    0.000    0.000    0.000 King.py:44(move_right)
+      468    0.000    0.000    0.000    0.000 King.py:53(move_down)
         1    0.000    0.000    0.000    0.000 King.py:6(King)
-      173    0.000    0.000    0.000    0.000 King.py:62(move_up_left)
-      173    0.000    0.000    0.000    0.000 King.py:73(move_up_right)
+      468    0.000    0.000    0.000    0.000 King.py:62(move_up_left)
+      468    0.000    0.000    0.000    0.000 King.py:73(move_up_right)
         2    0.000    0.000    0.000    0.000 King.py:8(__init__)
-      173    0.000    0.000    0.000    0.000 King.py:83(move_down_left)
-      173    0.000    0.000    0.000    0.000 King.py:94(move_down_right)
+      468    0.000    0.000    0.000    0.000 King.py:83(move_down_left)
+      468    0.000    0.000    0.000    0.000 King.py:94(move_down_right)
         1    0.000    0.000    0.000    0.000 Move.py:1(<module>)
         1    0.000    0.000    0.000    0.000 Move.py:1(Move)
-     4732    0.002    0.000    0.002    0.000 Move.py:3(__init__)
+    10000    0.004    0.000    0.004    0.000 Move.py:3(__init__)
         1    0.000    0.000    0.000    0.000 Pawn.py:1(<module>)
-     1366    0.001    0.000    0.016    0.000 Pawn.py:11(get_possible_moves)
-     1366    0.006    0.000    0.009    0.000 Pawn.py:17(move_forward)
-     1366    0.002    0.000    0.006    0.000 Pawn.py:27(kill_move)
-     1366    0.001    0.000    0.001    0.000 Pawn.py:33(can_kill_left)
-     1366    0.001    0.000    0.001    0.000 Pawn.py:36(can_kill_right)
-    14569    0.003    0.000    0.003    0.000 Pawn.py:39(check_side)
+     3814    0.003    0.000    0.047    0.000 Pawn.py:11(get_possible_moves)
+     3814    0.017    0.000    0.027    0.000 Pawn.py:17(move_forward)
+     3814    0.005    0.000    0.017    0.000 Pawn.py:27(kill_move)
+     3814    0.002    0.000    0.003    0.000 Pawn.py:33(can_kill_left)
+     3814    0.002    0.000    0.002    0.000 Pawn.py:36(can_kill_right)
+    40689    0.007    0.000    0.007    0.000 Pawn.py:39(check_side)
         1    0.000    0.000    0.000    0.000 Pawn.py:4(Pawn)
-     3869    0.001    0.000    0.001    0.000 Pawn.py:45(empty_cell)
-     2846    0.002    0.000    0.002    0.000 Pawn.py:48(in_board)
+    10639    0.003    0.000    0.003    0.000 Pawn.py:45(empty_cell)
+     8029    0.005    0.000    0.007    0.000 Pawn.py:48(in_board)
        16    0.000    0.000    0.000    0.000 Pawn.py:6(__init__)
         1    0.000    0.000    0.000    0.000 Pice.py:1(<module>)
         1    0.000    0.000    0.000    0.000 Pice.py:1(Pice)
@@ -175,28 +180,28 @@ Tue Feb 18 16:54:26 2020    output_profiling
         2    0.000    0.000    0.000    0.000 Player.py:3(__init__)
         6    0.000    0.000    0.000    0.000 Player.py:7(equals)
         1    0.000    0.000    0.000    0.000 Queen.py:1(<module>)
-      166    0.001    0.000    0.002    0.000 Queen.py:10(get_possible_moves)
-      166    0.000    0.000    0.000    0.000 Queen.py:22(move_up)
-      166    0.000    0.000    0.000    0.000 Queen.py:30(move_left)
-      166    0.000    0.000    0.000    0.000 Queen.py:38(move_right)
+      434    0.001    0.000    0.004    0.000 Queen.py:10(get_possible_moves)
+      434    0.000    0.000    0.000    0.000 Queen.py:22(move_up)
+      434    0.000    0.000    0.000    0.000 Queen.py:30(move_left)
+      434    0.000    0.000    0.000    0.000 Queen.py:38(move_right)
         1    0.000    0.000    0.000    0.000 Queen.py:4(Queen)
-      166    0.000    0.000    0.000    0.000 Queen.py:46(move_down)
-      166    0.000    0.000    0.000    0.000 Queen.py:54(move_up_left)
+      434    0.000    0.000    0.000    0.000 Queen.py:46(move_down)
+      434    0.000    0.000    0.000    0.000 Queen.py:54(move_up_left)
         2    0.000    0.000    0.000    0.000 Queen.py:6(__init__)
-      166    0.000    0.000    0.001    0.000 Queen.py:64(move_up_right)
-      166    0.000    0.000    0.000    0.000 Queen.py:74(move_down_left)
-      166    0.000    0.000    0.000    0.000 Queen.py:84(move_down_right)
+      434    0.000    0.000    0.000    0.000 Queen.py:64(move_up_right)
+      434    0.000    0.000    0.000    0.000 Queen.py:74(move_down_left)
+      434    0.000    0.000    0.000    0.000 Queen.py:84(move_down_right)
         1    0.000    0.000    0.000    0.000 Tower.py:1(<module>)
-      364    0.001    0.000    0.001    0.000 Tower.py:11(get_possible_moves)
-      364    0.000    0.000    0.000    0.000 Tower.py:19(move_up)
-      364    0.000    0.000    0.000    0.000 Tower.py:27(move_left)
-      364    0.000    0.000    0.000    0.000 Tower.py:35(move_right)
+      926    0.002    0.000    0.005    0.000 Tower.py:11(get_possible_moves)
+      926    0.001    0.000    0.002    0.000 Tower.py:19(move_up)
+      926    0.001    0.000    0.001    0.000 Tower.py:27(move_left)
+      926    0.001    0.000    0.001    0.000 Tower.py:35(move_right)
         1    0.000    0.000    0.000    0.000 Tower.py:4(Tower)
-      364    0.000    0.000    0.000    0.000 Tower.py:43(move_down)
+      926    0.001    0.000    0.001    0.000 Tower.py:43(move_down)
         4    0.000    0.000    0.000    0.000 Tower.py:6(__init__)
         1    0.000    0.000    0.000    0.000 __init__.py:1195(_bind)
         1    0.000    0.000    0.000    0.000 __init__.py:1212(bind)
-        1    0.000    0.000   12.711   12.711 __init__.py:1281(mainloop)
+        1    0.000    0.000   27.734   27.734 __init__.py:1281(mainloop)
       395    0.001    0.000    0.003    0.000 __init__.py:1315(_options)
         2    0.000    0.000    0.000    0.000 __init__.py:1340(nametowidget)
         2    0.000    0.000    0.000    0.000 __init__.py:1357(_register)
@@ -206,7 +211,7 @@ Tue Feb 18 16:54:26 2020    output_profiling
         1    0.000    0.000    0.000    0.000 __init__.py:140(EventType)
         1    0.000    0.000    0.000    0.000 __init__.py:1692(CallWrapper)
         2    0.000    0.000    0.000    0.000 __init__.py:1695(__init__)
-        3    0.000    0.000    8.643    2.881 __init__.py:1700(__call__)
+        3    0.000    0.000   23.437    7.812 __init__.py:1700(__call__)
         1    0.000    0.000    0.000    0.000 __init__.py:1712(XView)
         1    0.000    0.000    0.000    0.000 __init__.py:1733(YView)
         1    0.000    0.000    0.000    0.000 __init__.py:1754(Wm)
@@ -214,9 +219,9 @@ Tue Feb 18 16:54:26 2020    output_profiling
         1    0.000    0.000    0.000    0.000 __init__.py:1956(wm_protocol)
         1    0.000    0.000    0.000    0.000 __init__.py:1983(wm_title)
         1    0.000    0.000    0.000    0.000 __init__.py:1999(Tk)
-        1    0.000    0.000    0.199    0.199 __init__.py:2003(__init__)
+        1    0.000    0.000    0.203    0.203 __init__.py:2003(__init__)
         1    0.000    0.000    0.000    0.000 __init__.py:2033(_loadtk)
-        1    0.000    0.000    0.006    0.006 __init__.py:2058(destroy)
+        1    0.000    0.000    0.005    0.005 __init__.py:2058(destroy)
         1    0.000    0.000    0.000    0.000 __init__.py:2067(readprofile)
         1    0.000    0.000    0.000    0.000 __init__.py:2121(Pack)
         8    0.000    0.000    0.000    0.000 __init__.py:2125(pack_configure)
@@ -232,8 +237,8 @@ Tue Feb 18 16:54:26 2020    output_profiling
         1    0.000    0.000    0.000    0.000 __init__.py:2348(Button)
         1    0.000    0.000    0.000    0.000 __init__.py:2393(Canvas)
         1    0.000    0.000    0.000    0.000 __init__.py:2395(__init__)
-      386    0.002    0.000    0.033    0.000 __init__.py:2470(_create)
-      128    0.000    0.000    0.029    0.000 __init__.py:2487(create_image)
+      386    0.002    0.000    0.036    0.000 __init__.py:2470(_create)
+      128    0.000    0.000    0.032    0.000 __init__.py:2487(create_image)
       258    0.000    0.000    0.005    0.000 __init__.py:2499(create_rectangle)
         1    0.000    0.000    0.000    0.000 __init__.py:2634(Checkbutton)
         1    0.000    0.000    0.000    0.000 __init__.py:2663(Entry)
@@ -252,10 +257,10 @@ Tue Feb 18 16:54:26 2020    output_profiling
         1    0.000    0.000    0.000    0.000 __init__.py:3433(_setit)
         1    0.000    0.000    0.000    0.000 __init__.py:3444(OptionMenu)
         1    0.000    0.000    0.000    0.000 __init__.py:3481(Image)
-      128    0.001    0.000    0.051    0.000 __init__.py:3484(__init__)
+      128    0.001    0.000    0.047    0.000 __init__.py:3484(__init__)
       128    0.000    0.000    0.000    0.000 __init__.py:3503(__str__)
         1    0.000    0.000    0.000    0.000 __init__.py:3538(PhotoImage)
-      128    0.000    0.000    0.052    0.000 __init__.py:3540(__init__)
+      128    0.000    0.000    0.047    0.000 __init__.py:3540(__init__)
         1    0.000    0.000    0.000    0.000 __init__.py:3602(BitmapImage)
         1    0.000    0.000    0.000    0.000 __init__.py:3617(Spinbox)
         1    0.000    0.000    0.000    0.000 __init__.py:3775(LabelFrame)
@@ -266,18 +271,18 @@ Tue Feb 18 16:54:26 2020    output_profiling
         1    0.000    0.000    0.000    0.000 __init__.py:531(BooleanVar)
         1    0.000    0.000    0.000    0.000 __init__.py:574(Misc)
         2    0.000    0.000    0.000    0.000 __init__.py:584(destroy)
-      396    0.001    0.000    0.002    0.000 __init__.py:96(_cnfmerge)
+      396    0.001    0.000    0.001    0.000 __init__.py:96(_cnfmerge)
         1    0.000    0.000    0.000    0.000 _collections_abc.py:664(__contains__)
         1    0.000    0.000    0.000    0.000 bisect.py:1(<module>)
         1    0.000    0.000    0.000    0.000 constants.py:4(<module>)
-5079526/5576    3.864    0.000    8.368    0.002 copy.py:132(deepcopy)
-  4209694    0.267    0.000    0.267    0.000 copy.py:190(_deepcopy_atomic)
-55760/11152    0.185    0.000    8.213    0.001 copy.py:210(_deepcopy_list)
-540860/5576    1.122    0.000    8.283    0.001 copy.py:236(_deepcopy_dict)
-   780616    0.320    0.000    0.449    0.000 copy.py:252(_keep_alive)
-183996/5576    0.450    0.000    8.331    0.001 copy.py:268(_reconstruct)
-   367992    0.087    0.000    0.297    0.000 copy.py:273(<genexpr>)
-   183996    0.066    0.000    0.087    0.000 copyreg.py:87(__newobj__)
+13932627/15000   10.464    0.000   22.935    0.002 copy.py:132(deepcopy)
+ 11338002    0.719    0.000    0.719    0.000 copy.py:190(_deepcopy_atomic)
+165000/45000    0.562    0.000   22.461    0.000 copy.py:210(_deepcopy_list)
+1454875/15000    3.098    0.000   22.703    0.002 copy.py:236(_deepcopy_dict)
+  2114750    0.870    0.000    1.223    0.000 copy.py:252(_keep_alive)
+494875/15000    1.231    0.000   22.832    0.002 copy.py:268(_reconstruct)
+   989750    0.246    0.000    0.810    0.000 copy.py:273(<genexpr>)
+   494875    0.180    0.000    0.239    0.000 copyreg.py:87(__newobj__)
         7    0.000    0.000    0.000    0.000 copyreg.py:96(_slotnames)
         1    0.000    0.000    0.000    0.000 datetime.py:1034(time)
         2    0.000    0.000    0.000    0.000 datetime.py:1059(__new__)
@@ -319,7 +324,7 @@ Tue Feb 18 16:54:26 2020    output_profiling
         1    0.000    0.000    0.000    0.000 genericpath.py:117(_splitext)
         4    0.000    0.000    0.000    0.000 genericpath.py:27(isfile)
        14    0.000    0.000    0.000    0.000 hashlib.py:116(__get_openssl_constructor)
-        1    0.000    0.000    0.001    0.001 hashlib.py:54(<module>)
+        1    0.000    0.000    0.002    0.002 hashlib.py:54(<module>)
         8    0.000    0.000    0.000    0.000 hashlib.py:73(__get_builtin_constructor)
         2    0.000    0.000    0.000    0.000 os.py:664(__getitem__)
         2    0.000    0.000    0.000    0.000 os.py:742(encode)
@@ -328,14 +333,14 @@ Tue Feb 18 16:54:26 2020    output_profiling
         1    0.000    0.000    0.000    0.000 posixpath.py:144(basename)
         5    0.000    0.000    0.000    0.000 posixpath.py:41(_get_sep)
         4    0.000    0.000    0.000    0.000 posixpath.py:75(join)
-     4891    0.006    0.000    0.016    0.000 random.py:173(randrange)
-     4891    0.003    0.000    0.018    0.000 random.py:217(randint)
-     4891    0.005    0.000    0.010    0.000 random.py:223(_randbelow)
+    12645    0.016    0.000    0.042    0.000 random.py:173(randrange)
+    12645    0.008    0.000    0.050    0.000 random.py:217(randint)
+    12645    0.015    0.000    0.026    0.000 random.py:223(_randbelow)
         1    0.000    0.000    0.002    0.002 random.py:38(<module>)
         1    0.000    0.000    0.000    0.000 random.py:668(SystemRandom)
         1    0.000    0.000    0.000    0.000 random.py:71(Random)
         1    0.000    0.000    0.000    0.000 random.py:87(__init__)
-     2789    0.005    0.000    0.022    0.000 random.py:96(seed)
+     7501    0.014    0.000    0.060    0.000 random.py:96(seed)
         2    0.000    0.000    0.000    0.000 re.py:231(compile)
         2    0.000    0.000    0.000    0.000 re.py:286(_compile)
         2    0.000    0.000    0.000    0.000 sre_compile.py:223(_compile_charset)
@@ -368,17 +373,17 @@ Tue Feb 18 16:54:26 2020    output_profiling
         2    0.000    0.000    0.000    0.000 sre_parse.py:84(opengroup)
         2    0.000    0.000    0.000    0.000 sre_parse.py:844(parse)
         2    0.000    0.000    0.000    0.000 sre_parse.py:96(closegroup)
-   184055    0.021    0.000    0.021    0.000 {built-in method __new__ of type object at 0x9d12c0}
+   494934    0.059    0.000    0.059    0.000 {built-in method __new__ of type object at 0x9d12c0}
         1    0.000    0.000    0.000    0.000 {built-in method _hashlib.openssl_md5}
         1    0.000    0.000    0.000    0.000 {built-in method _hashlib.openssl_sha1}
         1    0.000    0.000    0.000    0.000 {built-in method _hashlib.openssl_sha224}
         1    0.000    0.000    0.000    0.000 {built-in method _hashlib.openssl_sha256}
         1    0.000    0.000    0.000    0.000 {built-in method _hashlib.openssl_sha384}
         1    0.000    0.000    0.000    0.000 {built-in method _hashlib.openssl_sha512}
-       19    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+       18    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
       124    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
         6    0.000    0.000    0.000    0.000 {built-in method _imp.create_builtin}
-        2    0.002    0.001    0.002    0.001 {built-in method _imp.create_dynamic}
+        2    0.003    0.001    0.003    0.001 {built-in method _imp.create_dynamic}
         6    0.000    0.000    0.000    0.000 {built-in method _imp.exec_builtin}
         2    0.000    0.000    0.000    0.000 {built-in method _imp.exec_dynamic}
        26    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
@@ -388,73 +393,82 @@ Tue Feb 18 16:54:26 2020    output_profiling
        54    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
        56    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
       773    0.000    0.000    0.000    0.000 {built-in method _tkinter._flatten}
-        1    0.198    0.198    0.198    0.198 {built-in method _tkinter.create}
+        1    0.202    0.202    0.202    0.202 {built-in method _tkinter.create}
        63    0.001    0.000    0.002    0.000 {built-in method builtins.__build_class__}
        72    0.000    0.000    0.000    0.000 {built-in method builtins.abs}
        28    0.000    0.000    0.000    0.000 {built-in method builtins.any}
       517    0.000    0.000    0.000    0.000 {built-in method builtins.callable}
+        1    0.000    0.000    0.000    0.000 {built-in method builtins.compile}
        45    0.000    0.000    0.000    0.000 {built-in method builtins.divmod}
-     21/1    0.000    0.000   12.936   12.936 {built-in method builtins.exec}
-   368298    0.102    0.000    0.102    0.000 {built-in method builtins.getattr}
+     21/1    0.000    0.000   27.965   27.965 {built-in method builtins.exec}
+   990056    0.281    0.000    0.281    0.000 {built-in method builtins.getattr}
        14    0.000    0.000    0.000    0.000 {built-in method builtins.globals}
-   184315    0.069    0.000    0.069    0.000 {built-in method builtins.hasattr}
-  6646336    0.471    0.000    0.471    0.000 {built-in method builtins.id}
-   378863    0.054    0.000    0.054    0.000 {built-in method builtins.isinstance}
-   184002    0.025    0.000    0.025    0.000 {built-in method builtins.issubclass}
-     5022    0.001    0.000    0.001    0.000 {built-in method builtins.len}
-     3716    0.002    0.000    0.002    0.000 {built-in method builtins.max}
-     1811    0.000    0.000    0.001    0.000 {built-in method builtins.min}
+   495194    0.193    0.000    0.193    0.000 {built-in method builtins.hasattr}
+ 18177130    1.304    0.000    1.304    0.000 {built-in method builtins.id}
+  1012948    0.162    0.000    0.162    0.000 {built-in method builtins.isinstance}
+   494881    0.068    0.000    0.068    0.000 {built-in method builtins.issubclass}
+    12778    0.002    0.000    0.002    0.000 {built-in method builtins.len}
+     9900    0.004    0.000    0.004    0.000 {built-in method builtins.max}
+     5011    0.001    0.000    0.001    0.000 {built-in method builtins.min}
         2    0.000    0.000    0.000    0.000 {built-in method builtins.ord}
         2    0.000    0.000    0.000    0.000 {built-in method builtins.repr}
         9    0.000    0.000    0.000    0.000 {built-in method builtins.round}
        43    0.000    0.000    0.000    0.000 {built-in method builtins.setattr}
-       38    0.000    0.000    0.000    0.000 {built-in method from_bytes}
-       19    0.002    0.000    0.002    0.000 {built-in method marshal.loads}
+       37    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        1    0.000    0.000    0.000    0.000 {built-in method marshal.dumps}
+       18    0.002    0.000    0.002    0.000 {built-in method marshal.loads}
         4    0.000    0.000    0.000    0.000 {built-in method math.ceil}
         1    0.000    0.000    0.000    0.000 {built-in method math.exp}
         2    0.000    0.000    0.000    0.000 {built-in method math.log}
         1    0.000    0.000    0.000    0.000 {built-in method math.sqrt}
-     2788    0.003    0.000    0.003    0.000 {built-in method now}
+     7500    0.010    0.000    0.010    0.000 {built-in method now}
        65    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
         7    0.000    0.000    0.000    0.000 {built-in method posix.getcwd}
         2    0.000    0.000    0.000    0.000 {built-in method posix.listdir}
-       86    0.000    0.000    0.000    0.000 {built-in method posix.stat}
-     2789    0.016    0.000    0.016    0.000 {function Random.seed at 0x7f29edbfb598}
-   183996    0.122    0.000    0.122    0.000 {method '__reduce_ex__' of 'object' objects}
-  1315404    0.117    0.000    0.117    0.000 {method 'append' of 'list' objects}
-     4891    0.001    0.000    0.001    0.000 {method 'bit_length' of 'int' objects}
-      528    0.084    0.000    0.084    0.000 {method 'call' of '_tkinter.tkapp' objects}
+        1    0.000    0.000    0.000    0.000 {built-in method posix.open}
+        1    0.000    0.000    0.000    0.000 {built-in method posix.replace}
+       88    0.000    0.000    0.000    0.000 {built-in method posix.stat}
+     7501    0.043    0.000    0.043    0.000 {function Random.seed at 0x7f3ad5964620}
+   494875    0.340    0.000    0.340    0.000 {method '__reduce_ex__' of 'object' objects}
+  3670013    0.331    0.000    0.331    0.000 {method 'append' of 'list' objects}
+    12645    0.002    0.000    0.002    0.000 {method 'bit_length' of 'int' objects}
+      528    0.082    0.000    0.082    0.000 {method 'call' of '_tkinter.tkapp' objects}
         4    0.000    0.000    0.000    0.000 {method 'createcommand' of '_tkinter.tkapp' objects}
         2    0.000    0.000    0.000    0.000 {method 'decode' of 'bytes' objects}
         4    0.000    0.000    0.000    0.000 {method 'deletecommand' of '_tkinter.tkapp' objects}
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
         2    0.000    0.000    0.000    0.000 {method 'encode' of 'str' objects}
        27    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 {method 'extend' of 'bytearray' objects}
         9    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
         6    0.000    0.000    0.000    0.000 {method 'find' of 'bytearray' objects}
- 10253901    0.926    0.000    0.926    0.000 {method 'get' of 'dict' objects}
+        2    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
+ 27880323    2.542    0.000    2.542    0.000 {method 'get' of 'dict' objects}
        53    0.000    0.000    0.000    0.000 {method 'get' of 'mappingproxy' objects}
         4    0.000    0.000    0.000    0.000 {method 'getboolean' of '_tkinter.tkapp' objects}
       412    0.000    0.000    0.000    0.000 {method 'getint' of '_tkinter.tkapp' objects}
-     9701    0.004    0.000    0.004    0.000 {method 'getrandbits' of '_random.Random' objects}
+    25486    0.010    0.000    0.010    0.000 {method 'getrandbits' of '_random.Random' objects}
         2    0.000    0.000    0.000    0.000 {method 'getvar' of '_tkinter.tkapp' objects}
        39    0.000    0.000    0.000    0.000 {method 'items' of 'collections.OrderedDict' objects}
-   541386    0.050    0.000    0.050    0.000 {method 'items' of 'dict' objects}
+  1455401    0.140    0.000    0.140    0.000 {method 'items' of 'dict' objects}
         4    0.000    0.000    0.000    0.000 {method 'items' of 'mappingproxy' objects}
       236    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
         1    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
-        1    4.067    4.067   12.711   12.711 {method 'mainloop' of '_tkinter.tkapp' objects}
+        1    4.297    4.297   27.734   27.734 {method 'mainloop' of '_tkinter.tkapp' objects}
         1    0.000    0.000    0.000    0.000 {method 'mro' of 'type' objects}
         1    0.000    0.000    0.000    0.000 {method 'pop' of 'dict' objects}
-       19    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
+       20    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
+       17    0.000    0.000    0.000    0.000 {method 'remove' of 'list' objects}
         3    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
-      167    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+      168    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
       432    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
         2    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
         8    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'to_bytes' of 'int' objects}
         1    0.000    0.000    0.000    0.000 {method 'translate' of 'bytearray' objects}
         1    0.000    0.000    0.000    0.000 {method 'union' of 'set' objects}
-   184770    0.057    0.000    0.057    0.000 {method 'update' of 'dict' objects}
+   495649    0.154    0.000    0.154    0.000 {method 'update' of 'dict' objects}
         2    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 {method 'write' of '_io.FileIO' objects}
 
 

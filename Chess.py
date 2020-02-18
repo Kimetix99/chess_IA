@@ -16,6 +16,7 @@ class Chess:
         self.board=Canvas(window, height=self.BOARD_HEIGHT, width=self.BOARD_WIDTH)
         self.cell_height = self.BOARD_HEIGHT/self.NUM_Y_CELLS
         self.cell_width = self.BOARD_WIDTH/self.NUM_X_CELLS
+        self.images=[]
 
     #Create board
     def create_board(self):
@@ -51,10 +52,12 @@ class Chess:
                 elif pice['p'] == "" and pice['m'] == "":
                     pass
                 elif pice["p"] != "" and pice["m"] == "":
-                    self.board.create_image(self.x_coordinates_to_size(j),self.y_coordinates_to_size(i),image=pice["p"].figure)
+                    self.images.append(PhotoImage(file=pice["p"].figure))
+                    self.board.create_image(self.x_coordinates_to_size(j),self.y_coordinates_to_size(i),image=self.images[-1])
                 else:
                     self.board.create_rectangle(self.x_coordinates_to_size(j)-((self.BOARD_WIDTH/self.NUM_X_CELLS)/2),self.y_coordinates_to_size(i)-((self.BOARD_HEIGHT/self.NUM_Y_CELLS)/2), self.x_coordinates_to_size(j)+self.cell_width-((self.BOARD_WIDTH/self.NUM_X_CELLS)/2), self.y_coordinates_to_size(i)+self.cell_height-((self.BOARD_HEIGHT/self.NUM_Y_CELLS)/2), fill="#00FF3A")
-                    self.board.create_image(self.x_coordinates_to_size(j),self.y_coordinates_to_size(i),image=pice["p"].figure)
+                    self.images.append(PhotoImage(file=pice["p"].figure))
+                    self.board.create_image(self.x_coordinates_to_size(j),self.y_coordinates_to_size(i),image=self.images[-1])
                 j+=1  
             i += 1
         self.board.pack()

@@ -23,15 +23,16 @@ class Game:
                 self.clean_board_moves()
                 self.board.actualizeMoves(posX, posY)
             elif (self.board.isMoveCell(posX,posY) and not self.board.containsPlayerPice(posX, posY, self.turn)) or (self.board.containsPlayerPice(posX, posY, self.turn) and self.board.isMoveCell(posX,posY)):
-                self.board.movePice(posX,posY)
+                move = self.board.board[posY][posX]['m']
+                self.board.movePice(move)
                 self.clean_board_moves()
                 self.changeTurn()
             else:
                 self.clean_board_moves()
             self.reset_board()
         if self.turn.equals(self.player2):
-            chessboot = ChessBot()
-            self.board = chessboot.bot_move(self.board)
+            chessboot = ChessBot(self.board)
+            self.board=chessboot.bot_move()[0]
             self.changeTurn()
             self.reset_board()
         if self.check_end_of_game():

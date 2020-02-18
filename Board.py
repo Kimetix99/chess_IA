@@ -13,16 +13,23 @@ class Board:
 
     def __init__(self):
         self.board=[
-            [{"p":Tower("tower","black",PhotoImage(file="./img/black_t.png"),True,0,0),"m":""},{"p":Horse("horse","black",PhotoImage(file="./img/black_h.png"),True,0,1),"m":""},{"p":Bishop("bishop","black",PhotoImage(file="./img/black_b.png"),True,0,2),"m":""},{"p":Queen("queen", "black",PhotoImage(file="./img/black_q.png"),True,0,3),"m":""},{"p":King("king","black",PhotoImage(file="./img/black_k.png"),True,0,4),"m":""},{"p":Bishop("bishop","black",PhotoImage(file="./img/black_b.png"),True,0,5),"m":""},{"p":Horse("horse","black",PhotoImage(file="./img/black_h.png"),True,0,6),"m":""},{"p":Tower("tower","black",PhotoImage(file="./img/black_t.png"),True,0,7),"m":""}],
-            [{"p":Pawn("pawn","black",PhotoImage(file="./img/black_p.png"),True,1,0),"m":""},{"p":Pawn("pawn","black",PhotoImage(file="./img/black_p.png"),True,1,1),"m":""},{"p":Pawn("pawn","black",PhotoImage(file="./img/black_p.png"),True,1,2),"m":""},{"p":Pawn("pawn","black",PhotoImage(file="./img/black_p.png"),True,1,3),"m":""},{"p":Pawn("pawn","black",PhotoImage(file="./img/black_p.png"),True,1,4),"m":""},{"p":Pawn("pawn","black",PhotoImage(file="./img/black_p.png"),True,1,5),"m":""},{"p":Pawn("pawn","black",PhotoImage(file="./img/black_p.png"),True,1,6),"m":""},{"p":Pawn("pawn","black",PhotoImage(file="./img/black_p.png"),True,1,7),"m":""}],
+            [{"p":Tower("tower","black","./img/black_t.png",True,0,0),"m":""},{"p":Horse("horse","black","./img/black_h.png",True,0,1),"m":""},{"p":Bishop("bishop","black","./img/black_b.png",True,0,2),"m":""},{"p":Queen("queen", "black","./img/black_q.png",True,0,3),"m":""},{"p":King("king","black","./img/black_k.png",True,0,4),"m":""},{"p":Bishop("bishop","black","./img/black_b.png",True,0,5),"m":""},{"p":Horse("horse","black","./img/black_h.png",True,0,6),"m":""},{"p":Tower("tower","black","./img/black_t.png",True,0,7),"m":""}],
+            [{"p":Pawn("pawn","black","./img/black_p.png",True,1,0),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,1),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,2),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,3),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,4),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,5),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,6),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,7),"m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
-            [{"p":Pawn("pawn","white",PhotoImage(file="./img/white_p.png"),True,6,0),"m":""},{"p":Pawn("pawn","white",PhotoImage(file="./img/white_p.png"),True,6,1),"m":""},{"p":Pawn("pawn","white",PhotoImage(file="./img/white_p.png"),True,6,2),"m":""},{"p":Pawn("pawn","white",PhotoImage(file="./img/white_p.png"),True,6,3),"m":""},{"p":Pawn("pawn","white",PhotoImage(file="./img/white_p.png"),True,6,4),"m":""},{"p":Pawn("pawn","white",PhotoImage(file="./img/white_p.png"),True,6,5),"m":""},{"p":Pawn("pawn","white",PhotoImage(file="./img/white_p.png"),True,6,6),"m":""},{"p":Pawn("pawn","white",PhotoImage(file="./img/white_p.png"),True,6,7),"m":""}],
-            [{"p":Tower("tower","white",PhotoImage(file="./img/white_t.png"),True,7,0),"m":""},{"p":Horse("horse","white",PhotoImage(file="./img/white_h.png"),True,7,1),"m":""},{"p":Bishop("bishop","white",PhotoImage(file="./img/white_b.png"),True,7,2),"m":""},{"p":Queen("queen", "white",PhotoImage(file="./img/white_q.png"),True,7,3),"m":""},{"p":King("king","white",PhotoImage(file="./img/white_k.png"),True,7,4),"m":""},{"p":Bishop("bishop","white",PhotoImage(file="./img/white_b.png"),True,7,5),"m":""},{"p":Horse("horse","white",PhotoImage(file="./img/white_h.png"),True,7,6),"m":""},{"p":Tower("tower","white",PhotoImage(file="./img/white_t.png"),True,7,7),"m":""}]
+            [{"p":Pawn("pawn","white","./img/white_p.png",True,6,0),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,1),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,2),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,3),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,4),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,5),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,6),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,7),"m":""}],
+            [{"p":Tower("tower","white","./img/white_t.png",True,7,0),"m":""},{"p":Horse("horse","white","./img/white_h.png",True,7,1),"m":""},{"p":Bishop("bishop","white","./img/white_b.png",True,7,2),"m":""},{"p":Queen("queen", "white","./img/white_q.png",True,7,3),"m":""},{"p":King("king","white","./img/white_k.png",True,7,4),"m":""},{"p":Bishop("bishop","white","./img/white_b.png",True,7,5),"m":""},{"p":Horse("horse","white","./img/white_h.png",True,7,6),"m":""},{"p":Tower("tower","white","./img/white_t.png",True,7,7),"m":""}]
         ]
-        self.black_pices=self.board[0] + self.board[1]
+        self.black_pices=[]
+        top_side=self.board[0] + self.board[1]
+        for cell in top_side:
+            self.black_pices.append(cell['p'])
+        self.white_pices=[]
+        bot_side=self.board[6] + self.board[7]
+        for cell in bot_side:
+            self.white_pices.append(cell['p'])
         self.black_king_alive=True
         self.white_king_alive=True
 
@@ -37,16 +44,22 @@ class Board:
         for move in moves:
             self.board[move.destination[1]][move.destination[0]]['m'] = move
             
-    def movePice(self, posX, posY):
-        move = self.board[posY][posX]['m']
-        self.move_to_destination(move)
-        
-    def move_to_destination(self, move):
-        if move.enrock:
-            self.exchange_pice(move)
-        else:
+    def movePice(self, move):
+        if self.board[move.destination[1]][move.destination[0]]['p'] == '':
             self.replace_pice(move)
             self.check_init_pos(move)
+        else:
+            if move.enrock:
+                self.exchange_pice(move)
+            else:
+                self.kill_pice(move)
+                self.replace_pice(move)
+        
+    def kill_pice(self, move):
+        if self.board[move.destination[1]][move.destination[0]]['p'].side == 'black':
+            self.black_pices.remove(self.board[move.destination[1]][move.destination[0]]['p'])
+        else:
+            self.white_pices.remove(self.board[move.destination[1]][move.destination[0]]['p'])
 
     def check_init_pos(self, move):
         if isinstance(self.board[move.destination[1]][move.destination[0]]['p'],Pawn) or isinstance(self.board[move.destination[1]][move.destination[0]]['p'],Tower) or isinstance(self.board[move.destination[1]][move.destination[0]]['p'],King):
@@ -99,7 +112,7 @@ class Board:
         if self.board[move.origin[1]][move.origin[0]]['p'].side == 'black':
             return math.ceil((move.origin[0]+move.destination[0])/2)
         else:
-            return math.floor((move.origin[0]+move.destination[0])/2)
+            return math.ceil((move.origin[0]+move.destination[0])/2)
     
     def get_black_pices(self):
         black_pices=[]
@@ -108,3 +121,11 @@ class Board:
                 if cell['p'] != '' and cell['p'].side=='black':
                     black_pices.append(cell)
         return black_pices
+    
+    def get_white_pices(self):
+        white_pices=[]
+        for row in self.board:
+            for cell in row:
+                if cell['p'] != '' and cell['p'].side=='white':
+                    white_pices.append(cell)
+        return white_pices

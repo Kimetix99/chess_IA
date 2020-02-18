@@ -6,47 +6,60 @@ import sys
 
 class ChessBot:
 
+    def __init__(self,board):
+        self.board=board
+        self.RAMIFICATION_FACTOR=50
+
     def evaluation(self, board):
         value = 0
-        for row in board:
-            for cell in row:
-                if cell['p'] != '':
-                    if cell['p'].side == 'black':
-                        value -= cell['p'].value
-                    else:
-                        value += cell['p'].value
+        for pice in self.board.white_pices:
+            value += pice.value
+        for pice in self.board.black_pices:
+            value -= pice.value
         return value
 
-    def get_neightbor(self, new_board):
-        pices = new_board.get_black_pices()
+    def get_neightbor(self, new_board, side):
+        current_board = copy.deepcopy(new_board)
+        if side == 'white':
+            pices = current_board.white_pices
+        else:
+            pices = current_board.black_pices
         random.seed(datetime.now())
-        moves = pices[random.randint(0,len(pices)-1)]['p'].get_possible_moves(new_board.board)
+        moves = pices[random.randint(0,len(pices)-1)].get_possible_moves(current_board.board)
         if moves:
             move = moves[random.randint(0,len(moves)-1)]
-            new_board.move_to_destination(move)
-        return new_board
+            current_board.movePice(move)
+        return current_board
 
-    def bot_move(self,board):
+    def bot_move(self):
         boards=[]
-        for i in range(100):
-            neightbor=self.get_neightbor(board)
-            boards.append((neightbor, self.minimax(3, False, neightbor)))
-        print(boards)
+        for i in range(self.RAMIFICATION_FACTOR):
+            neightbor=self.get_neightbor(self.board,'black')
+            boards.append((neightbor, self.minimax(2, False, neightbor, -sys.maxsize, sys.maxsize)))
+        return min(boards, key = lambda t: t[1])
+        
 
-    def minimax(self, depth, maxTurn, board):
-        if depth == 0 or not board.check_kings_alive():
-            return self.evaluation(board.board)
+    def minimax(self, depth, maxTurn, board, alpha, beta):
+        current_board = copy.deepcopy(board)
+        if depth == 0 or not current_board.check_kings_alive():
+            return self.evaluation(current_board.board)
         if maxTurn:
             maxEval = -sys.maxsize
-            for i in range(100):
-                eval = self.minimax(depth - 1, False, self.get_neightbor(board))
+            for i in range(self.RAMIFICATION_FACTOR):
+                eval = self.minimax(depth - 1, False, self.get_neightbor(current_board,'white'), alpha, beta)
                 maxEval = max(maxEval, eval)
+                alpha = max(alpha, eval)
+                if beta <= alpha:
+                    break
             return maxEval
         else:
             minEval = +sys.maxsize
-            for i in range(100):
-                eval = self.minimax(depth - 1, True, self.get_neightbor(board))
+            for i in range(self.RAMIFICATION_FACTOR):
+                eval = self.minimax(depth - 1, True, self.get_neightbor(current_board,'black'), alpha, beta)
                 minEval = min(minEval, eval)
+                beta = min(beta, eval)
+                if beta <= alpha:
+                    break
             return minEval
 
             
