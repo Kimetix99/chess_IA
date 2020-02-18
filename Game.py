@@ -10,7 +10,6 @@ class Game:
         self.board = board
         self.player1 = Player('1','white')
         self.player2 = Player('2','black')
-        self.chessboot = ChessBot(self.board)
         self.turn = self.player1
 
     def start_game(self):
@@ -23,21 +22,20 @@ class Game:
             if self.board.containsPlayerPice(posX, posY, self.turn) and not self.board.isMoveCell(posX,posY):
                 self.clean_board_moves()
                 self.board.actualizeMoves(posX, posY)
-            elif self.board.isMoveCell(posX,posY) and not self.board.containsPlayerPice(posX, posY, self.turn):
-                self.board.movePice(posX,posY)
-                self.clean_board_moves()
-                self.changeTurn()
-            elif self.board.containsPlayerPice(posX, posY, self.turn) and self.board.isMoveCell(posX,posY):
+            elif (self.board.isMoveCell(posX,posY) and not self.board.containsPlayerPice(posX, posY, self.turn)) or (self.board.containsPlayerPice(posX, posY, self.turn) and self.board.isMoveCell(posX,posY)):
                 self.board.movePice(posX,posY)
                 self.clean_board_moves()
                 self.changeTurn()
             else:
                 self.clean_board_moves()
-        self.board = self.chessboot.minimax(3,0,False,self.board,self.chessboot.evaluation(self.board.board))
-        self.changeTurn()
+            self.reset_board()
+        if self.turn.equals(self.player2):
+            chessboot = ChessBot()
+            self.board = chessboot.bot_move(self.board)
+            self.changeTurn()
+            self.reset_board()
         if self.check_end_of_game():
             self.chess.window.destroy()
-        self.reset_board()
     
     def changeTurn(self):
         if self.turn.equals(self.player1):
