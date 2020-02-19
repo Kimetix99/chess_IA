@@ -1,6 +1,6 @@
-Wed Feb 19 17:38:03 2020    output_profiling
+Wed Feb 19 18:18:41 2020    output_profiling
 
-         34018 function calls (33548 primitive calls) in 29.328 seconds
+         34056 function calls (33585 primitive calls) in 28.595 seconds
 
    Ordered by: standard name
 
@@ -9,11 +9,11 @@ Wed Feb 19 17:38:03 2020    output_profiling
        70    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:143(__init__)
        70    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:147(__enter__)
        70    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:151(__exit__)
-       80    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:157(_get_module_lock)
+       80    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:157(_get_module_lock)
        70    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:176(cb)
        10    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:194(_lock_unlock_module)
-     94/6    0.000    0.000    0.042    0.007 <frozen importlib._bootstrap>:211(_call_with_frames_removed)
-      734    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
+     95/6    0.000    0.000    0.035    0.006 <frozen importlib._bootstrap>:211(_call_with_frames_removed)
+      736    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:222(_verbose_message)
        15    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:232(_requires_builtin_wrapper)
        66    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:307(__init__)
        66    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:311(__enter__)
@@ -25,10 +25,10 @@ Wed Feb 19 17:38:03 2020    output_profiling
        90    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:416(parent)
        66    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:424(has_location)
        15    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:433(spec_from_loader)
-       66    0.000    0.000    0.002    0.000 <frozen importlib._bootstrap>:504(_init_module_attrs)
-       66    0.000    0.000    0.008    0.000 <frozen importlib._bootstrap>:564(module_from_spec)
+       66    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:504(_init_module_attrs)
+       66    0.000    0.000    0.006    0.000 <frozen importlib._bootstrap>:564(module_from_spec)
        70    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:58(__init__)
-     66/6    0.000    0.000    0.045    0.008 <frozen importlib._bootstrap>:651(_load_unlocked)
+     66/6    0.000    0.000    0.037    0.006 <frozen importlib._bootstrap>:651(_load_unlocked)
        68    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:707(find_spec)
        15    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:728(create_module)
        15    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:736(exec_module)
@@ -37,45 +37,52 @@ Wed Feb 19 17:38:03 2020    output_profiling
        53    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:780(find_spec)
       174    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:843(__enter__)
       174    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:847(__exit__)
-       68    0.001    0.000    0.007    0.000 <frozen importlib._bootstrap>:870(_find_spec)
-     70/6    0.000    0.000    0.046    0.008 <frozen importlib._bootstrap>:936(_find_and_load_unlocked)
-     70/6    0.000    0.000    0.046    0.008 <frozen importlib._bootstrap>:966(_find_and_load)
-   126/71    0.000    0.000    0.023    0.000 <frozen importlib._bootstrap>:997(_handle_fromlist)
+       68    0.000    0.000    0.006    0.000 <frozen importlib._bootstrap>:870(_find_spec)
+     70/6    0.000    0.000    0.038    0.006 <frozen importlib._bootstrap>:936(_find_and_load_unlocked)
+     70/6    0.000    0.000    0.038    0.006 <frozen importlib._bootstrap>:966(_find_and_load)
+   126/71    0.000    0.000    0.021    0.000 <frozen importlib._bootstrap>:997(_handle_fromlist)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:106(_write_atomic)
         3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1067(_path_hooks)
       159    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1080(_path_importer_cache)
-       53    0.000    0.000    0.006    0.000 <frozen importlib._bootstrap_external>:1117(_get_spec)
-       53    0.000    0.000    0.006    0.000 <frozen importlib._bootstrap_external>:1149(find_spec)
+       53    0.000    0.000    0.005    0.000 <frozen importlib._bootstrap_external>:1117(_get_spec)
+       53    0.000    0.000    0.005    0.000 <frozen importlib._bootstrap_external>:1149(find_spec)
         3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1196(__init__)
        24    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1202(<genexpr>)
        51    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1228(_get_spec)
-      128    0.001    0.000    0.005    0.000 <frozen importlib._bootstrap_external>:1233(find_spec)
+      128    0.001    0.000    0.004    0.000 <frozen importlib._bootstrap_external>:1233(find_spec)
         3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1281(_fill_cache)
         3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:1322(path_hook_for_FileFinder)
        92    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:263(cache_from_source)
        51    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:361(_get_cached)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:373(_calc_mode)
        46    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:393(_check_name_wrapper)
       128    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:41(_relax_case)
-       46    0.001    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:430(_validate_bytecode_header)
-       46    0.000    0.000    0.008    0.000 <frozen importlib._bootstrap_external>:485(_compile_bytecode)
-       92    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:52(_r_long)
+       46    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:430(_validate_bytecode_header)
+        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:47(_w_long)
+       45    0.000    0.000    0.007    0.000 <frozen importlib._bootstrap_external>:485(_compile_bytecode)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:497(_code_to_bytecode)
+       91    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:52(_r_long)
        51    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:524(spec_from_file_location)
-      668    0.001    0.000    0.002    0.000 <frozen importlib._bootstrap_external>:57(_path_join)
+      668    0.001    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:57(_path_join)
       668    0.001    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:59(<listcomp>)
-       92    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:63(_path_split)
+       93    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:63(_path_split)
        46    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:669(create_module)
-     46/6    0.000    0.000    0.045    0.007 <frozen importlib._bootstrap_external>:672(exec_module)
-       46    0.000    0.000    0.012    0.000 <frozen importlib._bootstrap_external>:743(get_code)
-      234    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:75(_path_stat)
+     46/6    0.000    0.000    0.037    0.006 <frozen importlib._bootstrap_external>:672(exec_module)
+        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap_external>:735(source_to_code)
+       46    0.000    0.000    0.010    0.000 <frozen importlib._bootstrap_external>:743(get_code)
+      236    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:75(_path_stat)
        46    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:800(__init__)
        46    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:825(get_filename)
-       46    0.001    0.000    0.002    0.000 <frozen importlib._bootstrap_external>:830(get_data)
+       47    0.001    0.000    0.001    0.000 <frozen importlib._bootstrap_external>:830(get_data)
        46    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:840(path_stats)
-       60    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:85(_path_is_mode_type)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:845(_cache_bytecode)
+       61    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:85(_path_is_mode_type)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:850(set_data)
         5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:908(__init__)
-        5    0.000    0.000    0.005    0.001 <frozen importlib._bootstrap_external>:919(create_module)
+        5    0.000    0.000    0.004    0.001 <frozen importlib._bootstrap_external>:919(create_module)
         5    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:927(exec_module)
        57    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:94(_path_isfile)
-        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:99(_path_isdir)
+        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap_external>:99(_path_isdir)
         1    0.000    0.000    0.000    0.000 <string>:1(<module>)
         1    0.000    0.000    0.000    0.000 <string>:5(SelectorKey)
         1    0.000    0.000    0.000    0.000 <string>:5(TokenInfo)
@@ -83,7 +90,7 @@ Wed Feb 19 17:38:03 2020    output_profiling
         1    0.000    0.000    0.000    0.000 Bishop.py:1(<module>)
         1    0.000    0.000    0.000    0.000 Bishop.py:4(Bishop)
         4    0.000    0.000    0.000    0.000 Bishop.py:6(__init__)
-        1    0.000    0.000    0.003    0.003 Board.py:1(<module>)
+        1    0.000    0.000    0.001    0.001 Board.py:1(<module>)
         2    0.000    0.000    0.000    0.000 Board.py:102(check_kings_alive)
         1    0.000    0.000    0.000    0.000 Board.py:105(king_dies)
         1    0.000    0.000    0.000    0.000 Board.py:12(Board)
@@ -95,28 +102,28 @@ Wed Feb 19 17:38:03 2020    output_profiling
         1    0.000    0.000    0.000    0.000 Board.py:64(check_init_pos)
         1    0.000    0.000    0.000    0.000 Board.py:85(replace_pice)
         1    0.000    0.000    0.000    0.000 Board.py:98(pawn_reaches_final)
-        1    0.000    0.000   29.328   29.328 Chess.py:1(<module>)
-        1    0.000    0.000    0.000    0.000 Chess.py:10(__init__)
-        4    0.001    0.000    0.006    0.001 Chess.py:22(create_board)
-        4    0.002    0.001    0.141    0.035 Chess.py:45(display_pices)
+        1    0.000    0.000   28.596   28.596 Chess.py:1(<module>)
+        1    0.000    0.000    0.001    0.001 Chess.py:10(__init__)
+        4    0.001    0.000    0.005    0.001 Chess.py:22(create_board)
+        4    0.002    0.000    0.082    0.020 Chess.py:45(display_pices)
       132    0.000    0.000    0.000    0.000 Chess.py:65(x_coordinates_to_size)
       132    0.000    0.000    0.000    0.000 Chess.py:68(y_coordinates_to_size)
         2    0.000    0.000    0.000    0.000 Chess.py:71(size_to_x_coordinates)
         2    0.000    0.000    0.000    0.000 Chess.py:74(size_to_y_coordinates)
         1    0.000    0.000    0.000    0.000 Chess.py:8(Chess)
-        1    0.000    0.000    0.019    0.019 ChessBot.py:1(<module>)
+        1    0.000    0.000    0.015    0.015 ChessBot.py:1(<module>)
         1    0.000    0.000    0.000    0.000 ChessBot.py:10(__init__)
         1    0.000    0.000    0.000    0.000 ChessBot.py:15(Node)
-        1    0.000    0.000   25.226   25.226 ChessBot.py:41(bot_move)
+        1    0.000    0.000   25.614   25.614 ChessBot.py:41(bot_move)
         1    0.000    0.000    0.000    0.000 ChessBot.py:51(<listcomp>)
         1    0.000    0.000    0.001    0.001 ChessBot.py:56(<listcomp>)
         4    0.000    0.000    0.000    0.000 ChessBot.py:57(<lambda>)
         1    0.000    0.000    0.000    0.000 ChessBot.py:8(ChessBot)
-        1    0.000    0.000    0.020    0.020 Game.py:1(<module>)
+        1    0.000    0.000    0.017    0.017 Game.py:1(<module>)
         1    0.000    0.000    0.000    0.000 Game.py:15(start_game)
-        2    0.000    0.000   25.300   12.650 Game.py:18(click_handler)
+        2    0.000    0.000   25.687   12.843 Game.py:18(click_handler)
         2    0.000    0.000    0.000    0.000 Game.py:41(changeTurn)
-        3    0.000    0.000    0.074    0.025 Game.py:47(reset_board)
+        3    0.000    0.000    0.072    0.024 Game.py:47(reset_board)
         2    0.000    0.000    0.000    0.000 Game.py:51(clean_board_moves)
         2    0.000    0.000    0.000    0.000 Game.py:56(check_end_of_game)
         1    0.000    0.000    0.000    0.000 Game.py:6(Game)
@@ -156,7 +163,7 @@ Wed Feb 19 17:38:03 2020    output_profiling
         4    0.000    0.000    0.000    0.000 Tower.py:6(__init__)
         1    0.000    0.000    0.000    0.000 __init__.py:1195(_bind)
         1    0.000    0.000    0.000    0.000 __init__.py:1212(bind)
-        1    0.000    0.000   29.024   29.024 __init__.py:1281(mainloop)
+        1    0.000    0.000   28.358   28.358 __init__.py:1281(mainloop)
       395    0.001    0.000    0.003    0.000 __init__.py:1315(_options)
         2    0.000    0.000    0.000    0.000 __init__.py:1340(nametowidget)
         2    0.000    0.000    0.000    0.000 __init__.py:1357(_register)
@@ -164,10 +171,10 @@ Wed Feb 19 17:38:03 2020    output_profiling
         2    0.000    0.000    0.000    0.000 __init__.py:1388(_substitute)
        22    0.000    0.000    0.000    0.000 __init__.py:1394(getint_event)
         1    0.000    0.000    0.000    0.000 __init__.py:140(EventType)
-        1    0.000    0.000    0.013    0.013 __init__.py:15(<module>)
+        1    0.000    0.000    0.011    0.011 __init__.py:15(<module>)
         1    0.000    0.000    0.000    0.000 __init__.py:1692(CallWrapper)
         2    0.000    0.000    0.000    0.000 __init__.py:1695(__init__)
-        3    0.000    0.000   25.306    8.435 __init__.py:1700(__call__)
+        3    0.000    0.000   25.691    8.564 __init__.py:1700(__call__)
         1    0.000    0.000    0.000    0.000 __init__.py:1712(XView)
         1    0.000    0.000    0.000    0.000 __init__.py:1733(YView)
         1    0.000    0.000    0.000    0.000 __init__.py:1754(Wm)
@@ -177,7 +184,7 @@ Wed Feb 19 17:38:03 2020    output_profiling
         1    0.000    0.000    0.000    0.000 __init__.py:1999(Tk)
         1    0.000    0.000    0.198    0.198 __init__.py:2003(__init__)
         1    0.000    0.000    0.000    0.000 __init__.py:2033(_loadtk)
-        1    0.000    0.000    0.005    0.005 __init__.py:2058(destroy)
+        1    0.000    0.000    0.004    0.004 __init__.py:2058(destroy)
         1    0.000    0.000    0.000    0.000 __init__.py:2067(readprofile)
         1    0.000    0.000    0.000    0.000 __init__.py:2121(Pack)
         8    0.000    0.000    0.000    0.000 __init__.py:2125(pack_configure)
@@ -186,16 +193,16 @@ Wed Feb 19 17:38:03 2020    output_profiling
         1    0.000    0.000    0.000    0.000 __init__.py:2204(Grid)
         1    0.000    0.000    0.000    0.000 __init__.py:2251(BaseWidget)
         1    0.000    0.000    0.000    0.000 __init__.py:2253(_setup)
-        1    0.000    0.000    0.000    0.000 __init__.py:2286(__init__)
+        1    0.000    0.000    0.001    0.001 __init__.py:2286(__init__)
         1    0.000    0.000    0.000    0.000 __init__.py:2295(<listcomp>)
         1    0.000    0.000    0.001    0.001 __init__.py:2302(destroy)
         1    0.000    0.000    0.000    0.000 __init__.py:2313(Widget)
         1    0.000    0.000    0.000    0.000 __init__.py:2320(Toplevel)
         1    0.000    0.000    0.000    0.000 __init__.py:2348(Button)
         1    0.000    0.000    0.000    0.000 __init__.py:2393(Canvas)
-        1    0.000    0.000    0.000    0.000 __init__.py:2395(__init__)
-      386    0.002    0.000    0.043    0.000 __init__.py:2470(_create)
-      128    0.000    0.000    0.039    0.000 __init__.py:2487(create_image)
+        1    0.000    0.000    0.001    0.001 __init__.py:2395(__init__)
+      386    0.002    0.000    0.033    0.000 __init__.py:2470(_create)
+      128    0.000    0.000    0.028    0.000 __init__.py:2487(create_image)
       258    0.000    0.000    0.005    0.000 __init__.py:2499(create_rectangle)
         1    0.000    0.000    0.000    0.000 __init__.py:2634(Checkbutton)
         1    0.000    0.000    0.000    0.000 __init__.py:2663(Entry)
@@ -210,14 +217,14 @@ Wed Feb 19 17:38:03 2020    output_profiling
         1    0.000    0.000    0.000    0.000 __init__.py:2999(Scale)
         1    0.000    0.000    0.000    0.000 __init__.py:3032(Scrollbar)
         1    0.000    0.000    0.000    0.000 __init__.py:3076(Text)
-        1    0.000    0.000    0.006    0.006 __init__.py:31(<module>)
+        1    0.000    0.000    0.004    0.004 __init__.py:31(<module>)
         1    0.000    0.000    0.000    0.000 __init__.py:3433(_setit)
         1    0.000    0.000    0.000    0.000 __init__.py:3444(OptionMenu)
         1    0.000    0.000    0.000    0.000 __init__.py:3481(Image)
-      128    0.002    0.000    0.099    0.001 __init__.py:3484(__init__)
+      128    0.002    0.000    0.051    0.000 __init__.py:3484(__init__)
       128    0.000    0.000    0.000    0.000 __init__.py:3503(__str__)
         1    0.000    0.000    0.000    0.000 __init__.py:3538(PhotoImage)
-      128    0.001    0.000    0.100    0.001 __init__.py:3540(__init__)
+      128    0.000    0.000    0.051    0.000 __init__.py:3540(__init__)
         3    0.000    0.000    0.002    0.001 __init__.py:357(namedtuple)
         1    0.000    0.000    0.000    0.000 __init__.py:3602(BitmapImage)
         1    0.000    0.000    0.000    0.000 __init__.py:3617(Spinbox)
@@ -265,7 +272,7 @@ Wed Feb 19 17:38:03 2020    output_profiling
         1    0.000    0.000    0.000    0.000 connection.py:745(ConnectionWrapper)
         1    0.000    0.000    0.000    0.000 connection.py:767(XmlListener)
         1    0.000    0.000    0.000    0.000 constants.py:4(<module>)
-        1    0.000    0.000    0.012    0.012 context.py:1(<module>)
+        1    0.000    0.000    0.011    0.011 context.py:1(<module>)
         1    0.000    0.000    0.000    0.000 context.py:14(ProcessError)
         1    0.000    0.000    0.000    0.000 context.py:17(BufferTooShort)
         3    0.000    0.000    0.000    0.000 context.py:186(get_context)
@@ -363,8 +370,8 @@ Wed Feb 19 17:38:03 2020    output_profiling
         1    0.000    0.000    0.000    0.000 popen_fork.py:1(<module>)
         1    0.000    0.000    0.000    0.000 popen_fork.py:13(Popen)
         4    0.000    0.000    0.003    0.001 popen_fork.py:16(__init__)
-       10    0.000    0.000   25.207    2.521 popen_fork.py:24(poll)
-        4    0.000    0.000   25.207    6.302 popen_fork.py:43(wait)
+       10    0.000    0.000   25.595    2.560 popen_fork.py:24(poll)
+        4    0.000    0.000   25.595    6.399 popen_fork.py:43(wait)
         4    0.000    0.000    0.002    0.001 popen_fork.py:63(_launch)
         1    0.000    0.000    0.000    0.000 posixpath.py:121(splitext)
         1    0.000    0.000    0.000    0.000 posixpath.py:144(basename)
@@ -373,8 +380,8 @@ Wed Feb 19 17:38:03 2020    output_profiling
         6    0.000    0.000    0.000    0.000 posixpath.py:41(_get_sep)
         1    0.000    0.000    0.000    0.000 posixpath.py:64(isabs)
         4    0.000    0.000    0.000    0.000 posixpath.py:75(join)
-        1    0.000    0.000    0.002    0.002 process.py:10(<module>)
-        4    0.000    0.000   25.207    6.302 process.py:118(join)
+        1    0.000    0.000    0.001    0.001 process.py:10(<module>)
+        4    0.000    0.000   25.595    6.399 process.py:118(join)
         4    0.000    0.000    0.000    0.000 process.py:162(daemon)
         1    0.000    0.000    0.000    0.000 process.py:285(AuthenticationString)
         1    0.000    0.000    0.000    0.000 process.py:299(_MainProcess)
@@ -391,16 +398,16 @@ Wed Feb 19 17:38:03 2020    output_profiling
         1    0.000    0.000    0.000    0.000 queue.py:21(Queue)
         1    0.000    0.000    0.000    0.000 queue.py:214(PriorityQueue)
         1    0.000    0.000    0.000    0.000 queue.py:233(LifoQueue)
-        1    0.000    0.000    0.013    0.013 queues.py:10(<module>)
+        1    0.000    0.000    0.012    0.012 queues.py:10(<module>)
         1    0.000    0.000    0.000    0.000 queues.py:269(JoinableQueue)
         1    0.000    0.000    0.000    0.000 queues.py:311(SimpleQueue)
         1    0.000    0.000    0.000    0.000 queues.py:34(Queue)
         1    0.000    0.000    0.001    0.001 queues.py:36(__init__)
         1    0.000    0.000    0.000    0.000 queues.py:67(_after_fork)
-        4    0.000    0.000    0.000    0.000 queues.py:91(get)
+        4    0.000    0.000    0.001    0.000 queues.py:91(get)
        24    0.000    0.000    0.000    0.000 random.py:223(_randbelow)
        24    0.000    0.000    0.000    0.000 random.py:255(choice)
-        1    0.000    0.000    0.003    0.003 random.py:38(<module>)
+        1    0.000    0.000    0.002    0.002 random.py:38(<module>)
         1    0.000    0.000    0.000    0.000 random.py:668(SystemRandom)
         1    0.000    0.000    0.000    0.000 random.py:71(Random)
         2    0.000    0.000    0.000    0.000 random.py:87(__init__)
@@ -408,7 +415,7 @@ Wed Feb 19 17:38:03 2020    output_profiling
       102    0.000    0.000    0.000    0.000 re.py:169(match)
         4    0.000    0.000    0.001    0.000 re.py:231(compile)
       106    0.000    0.000    0.001    0.000 re.py:286(_compile)
-        1    0.000    0.000    0.006    0.006 reduction.py:10(<module>)
+        1    0.000    0.000    0.005    0.005 reduction.py:10(<module>)
         1    0.000    0.000    0.000    0.000 reduction.py:204(_C)
         1    0.000    0.000    0.000    0.000 reduction.py:244(AbstractReducer)
         1    0.000    0.000    0.000    0.000 reduction.py:33(ForkingPickler)
@@ -433,7 +440,7 @@ Wed Feb 19 17:38:03 2020    output_profiling
        75    0.000    0.000    0.000    0.000 signal.py:22(<lambda>)
         1    0.000    0.000    0.000    0.000 socket.py:130(_GiveupOnSendfile)
         1    0.000    0.000    0.000    0.000 socket.py:133(socket)
-        1    0.000    0.000    0.004    0.004 socket.py:47(<module>)
+        1    0.000    0.000    0.003    0.003 socket.py:47(<module>)
         1    0.000    0.000    0.000    0.000 socket.py:543(SocketIO)
       351    0.000    0.000    0.000    0.000 socket.py:76(<lambda>)
       352    0.000    0.000    0.000    0.000 socket.py:81(<lambda>)
@@ -450,7 +457,7 @@ Wed Feb 19 17:38:03 2020    output_profiling
        10    0.000    0.000    0.000    0.000 sre_compile.py:539(isstring)
         5    0.000    0.000    0.001    0.000 sre_compile.py:542(_code)
         5    0.000    0.000    0.001    0.000 sre_compile.py:557(compile)
-     17/5    0.000    0.000    0.001    0.000 sre_compile.py:64(_compile)
+     17/5    0.000    0.000    0.000    0.000 sre_compile.py:64(_compile)
        17    0.000    0.000    0.000    0.000 sre_parse.py:111(__init__)
        23    0.000    0.000    0.000    0.000 sre_parse.py:159(__len__)
        53    0.000    0.000    0.000    0.000 sre_parse.py:163(__getitem__)
@@ -469,7 +476,7 @@ Wed Feb 19 17:38:03 2020    output_profiling
        16    0.000    0.000    0.000    0.000 sre_parse.py:81(groups)
         5    0.000    0.000    0.000    0.000 sre_parse.py:828(fix_flags)
         3    0.000    0.000    0.000    0.000 sre_parse.py:84(opengroup)
-        5    0.000    0.000    0.001    0.000 sre_parse.py:844(parse)
+        5    0.000    0.000    0.000    0.000 sre_parse.py:844(parse)
         3    0.000    0.000    0.000    0.000 sre_parse.py:96(closegroup)
         1    0.000    0.000    0.000    0.000 subprocess.py:359(CompletedProcess)
         1    0.000    0.000    0.000    0.000 subprocess.py:42(<module>)
@@ -538,7 +545,7 @@ Wed Feb 19 17:38:03 2020    output_profiling
         1    0.000    0.000    0.000    0.000 tokenize.py:219(StopTokenizing)
         1    0.000    0.000    0.000    0.000 tokenize.py:222(Untokenizer)
         1    0.000    0.000    0.000    0.000 tokenize.py:99(TokenInfo)
-        1    0.000    0.000    0.003    0.003 traceback.py:1(<module>)
+        1    0.000    0.000    0.002    0.002 traceback.py:1(<module>)
         1    0.000    0.000    0.000    0.000 traceback.py:227(FrameSummary)
         1    0.000    0.000    0.000    0.000 traceback.py:316(StackSummary)
         1    0.000    0.000    0.000    0.000 traceback.py:438(TracebackException)
@@ -565,10 +572,10 @@ Wed Feb 19 17:38:03 2020    output_profiling
         1    0.000    0.000    0.000    0.000 {built-in method _hashlib.openssl_sha256}
         1    0.000    0.000    0.000    0.000 {built-in method _hashlib.openssl_sha384}
         1    0.000    0.000    0.000    0.000 {built-in method _hashlib.openssl_sha512}
-       46    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
+       45    0.000    0.000    0.000    0.000 {built-in method _imp._fix_co_filename}
       324    0.000    0.000    0.000    0.000 {built-in method _imp.acquire_lock}
        15    0.001    0.000    0.001    0.000 {built-in method _imp.create_builtin}
-        5    0.005    0.001    0.005    0.001 {built-in method _imp.create_dynamic}
+        5    0.004    0.001    0.004    0.001 {built-in method _imp.create_dynamic}
        15    0.000    0.000    0.000    0.000 {built-in method _imp.exec_builtin}
         5    0.000    0.000    0.000    0.000 {built-in method _imp.exec_dynamic}
        59    0.000    0.000    0.000    0.000 {built-in method _imp.is_builtin}
@@ -581,24 +588,25 @@ Wed Feb 19 17:38:03 2020    output_profiling
       144    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
       161    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
       773    0.000    0.000    0.000    0.000 {built-in method _tkinter._flatten}
-        1    0.197    0.197    0.197    0.197 {built-in method _tkinter.create}
+        1    0.198    0.198    0.198    0.198 {built-in method _tkinter.create}
         4    0.000    0.000    0.000    0.000 {built-in method _weakref._remove_dead_weakref}
         1    0.000    0.000    0.000    0.000 {built-in method atexit.register}
-  167/166    0.004    0.000    0.006    0.000 {built-in method builtins.__build_class__}
-      8/2    0.000    0.000    0.023    0.011 {built-in method builtins.__import__}
+  167/166    0.003    0.000    0.005    0.000 {built-in method builtins.__build_class__}
+      8/2    0.000    0.000    0.020    0.010 {built-in method builtins.__import__}
        72    0.000    0.000    0.000    0.000 {built-in method builtins.abs}
        74    0.000    0.000    0.000    0.000 {built-in method builtins.any}
       517    0.000    0.000    0.000    0.000 {built-in method builtins.callable}
+        1    0.001    0.001    0.001    0.001 {built-in method builtins.compile}
         3    0.000    0.000    0.000    0.000 {built-in method builtins.dir}
        45    0.000    0.000    0.000    0.000 {built-in method builtins.divmod}
-     51/1    0.002    0.000   29.328   29.328 {built-in method builtins.exec}
+     51/1    0.001    0.000   28.596   28.596 {built-in method builtins.exec}
       894    0.001    0.000    0.001    0.000 {built-in method builtins.getattr}
        20    0.000    0.000    0.000    0.000 {built-in method builtins.globals}
-     1012    0.001    0.000    0.001    0.000 {built-in method builtins.hasattr}
-        6    0.000    0.000    0.000    0.000 {built-in method builtins.id}
-     3619    0.001    0.000    0.001    0.000 {built-in method builtins.isinstance}
+     1012    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+        7    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+     3618    0.001    0.000    0.001    0.000 {built-in method builtins.isinstance}
       159    0.000    0.000    0.000    0.000 {built-in method builtins.issubclass}
-  461/454    0.000    0.000    0.000    0.000 {built-in method builtins.len}
+  463/456    0.000    0.000    0.000    0.000 {built-in method builtins.len}
         2    0.000    0.000    0.000    0.000 {built-in method builtins.max}
        41    0.000    0.000    0.000    0.000 {built-in method builtins.min}
        15    0.000    0.000    0.000    0.000 {built-in method builtins.next}
@@ -607,8 +615,9 @@ Wed Feb 19 17:38:03 2020    output_profiling
         9    0.000    0.000    0.000    0.000 {built-in method builtins.round}
       182    0.000    0.000    0.000    0.000 {built-in method builtins.setattr}
         7    0.000    0.000    0.000    0.000 {built-in method builtins.vars}
-       92    0.000    0.000    0.000    0.000 {built-in method from_bytes}
-       46    0.008    0.000    0.008    0.000 {built-in method marshal.loads}
+       91    0.000    0.000    0.000    0.000 {built-in method from_bytes}
+        1    0.000    0.000    0.000    0.000 {built-in method marshal.dumps}
+       45    0.006    0.000    0.006    0.000 {built-in method marshal.loads}
         4    0.000    0.000    0.000    0.000 {built-in method math.ceil}
         1    0.000    0.000    0.000    0.000 {built-in method math.exp}
         2    0.000    0.000    0.000    0.000 {built-in method math.log}
@@ -622,14 +631,16 @@ Wed Feb 19 17:38:03 2020    output_profiling
        32    0.000    0.000    0.000    0.000 {built-in method posix.getcwd}
        24    0.000    0.000    0.000    0.000 {built-in method posix.getpid}
         3    0.000    0.000    0.000    0.000 {built-in method posix.listdir}
+        1    0.000    0.000    0.000    0.000 {built-in method posix.open}
         5    0.000    0.000    0.000    0.000 {built-in method posix.pipe}
         8    0.000    0.000    0.000    0.000 {built-in method posix.read}
-      238    0.001    0.000    0.001    0.000 {built-in method posix.stat}
+        1    0.000    0.000    0.000    0.000 {built-in method posix.replace}
+      240    0.001    0.000    0.001    0.000 {built-in method posix.stat}
         1    0.000    0.000    0.000    0.000 {built-in method posix.sysconf}
         1    0.000    0.000    0.000    0.000 {built-in method posix.urandom}
-       10   25.207    2.521   25.207    2.521 {built-in method posix.waitpid}
+       10   25.595    2.560   25.595    2.560 {built-in method posix.waitpid}
         3    0.000    0.000    0.000    0.000 {built-in method sys._getframe}
-        2    0.000    0.000    0.000    0.000 {function Random.seed at 0x7f8eaeeea730}
+        2    0.000    0.000    0.000    0.000 {function Random.seed at 0x7f183c85e730}
        15    0.000    0.000    0.000    0.000 {method '__contains__' of 'frozenset' objects}
         4    0.000    0.000    0.000    0.000 {method '__enter__' of '_multiprocessing.SemLock' objects}
         1    0.000    0.000    0.000    0.000 {method '__enter__' of '_thread.lock' objects}
@@ -639,7 +650,7 @@ Wed Feb 19 17:38:03 2020    output_profiling
       194    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
       845    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
        24    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
-      528    0.140    0.000    0.140    0.000 {method 'call' of '_tkinter.tkapp' objects}
+      528    0.081    0.000    0.081    0.000 {method 'call' of '_tkinter.tkapp' objects}
         4    0.000    0.000    0.000    0.000 {method 'copy' of 'dict' objects}
         4    0.000    0.000    0.000    0.000 {method 'createcommand' of '_tkinter.tkapp' objects}
         2    0.000    0.000    0.000    0.000 {method 'decode' of 'bytes' objects}
@@ -648,15 +659,16 @@ Wed Feb 19 17:38:03 2020    output_profiling
         8    0.000    0.000    0.000    0.000 {method 'discard' of 'set' objects}
         2    0.000    0.000    0.000    0.000 {method 'encode' of 'str' objects}
        60    0.000    0.000    0.000    0.000 {method 'endswith' of 'str' objects}
+        3    0.000    0.000    0.000    0.000 {method 'extend' of 'bytearray' objects}
        20    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
        45    0.000    0.000    0.000    0.000 {method 'find' of 'bytearray' objects}
         8    0.000    0.000    0.000    0.000 {method 'flush' of '_io.TextIOWrapper' objects}
-       35    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
+       37    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
       180    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
       194    0.000    0.000    0.000    0.000 {method 'get' of 'mappingproxy' objects}
         4    0.000    0.000    0.000    0.000 {method 'getboolean' of '_tkinter.tkapp' objects}
       412    0.000    0.000    0.000    0.000 {method 'getint' of '_tkinter.tkapp' objects}
-       38    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
+       46    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
         8    0.000    0.000    0.000    0.000 {method 'getvalue' of '_io.BytesIO' objects}
         2    0.000    0.000    0.000    0.000 {method 'getvar' of '_tkinter.tkapp' objects}
        15    0.000    0.000    0.000    0.000 {method 'isidentifier' of 'str' objects}
@@ -667,25 +679,27 @@ Wed Feb 19 17:38:03 2020    output_profiling
       867    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
         7    0.000    0.000    0.000    0.000 {method 'keys' of 'dict' objects}
         2    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
-        1    3.718    3.718   29.024   29.024 {method 'mainloop' of '_tkinter.tkapp' objects}
+        1    2.667    2.667   28.358   28.358 {method 'mainloop' of '_tkinter.tkapp' objects}
       102    0.000    0.000    0.000    0.000 {method 'match' of '_sre.SRE_Pattern' objects}
         8    0.000    0.000    0.000    0.000 {method 'mro' of 'type' objects}
         8    0.000    0.000    0.000    0.000 {method 'pop' of 'dict' objects}
-       46    0.001    0.000    0.001    0.000 {method 'read' of '_io.FileIO' objects}
+       47    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
         4    0.000    0.000    0.000    0.000 {method 'release' of '_multiprocessing.SemLock' objects}
         5    0.000    0.000    0.000    0.000 {method 'replace' of 'str' objects}
         3    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
-      478    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
+      479    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
      1428    0.000    0.000    0.000    0.000 {method 'rstrip' of 'str' objects}
        10    0.000    0.000    0.000    0.000 {method 'setter' of 'property' objects}
         7    0.000    0.000    0.000    0.000 {method 'sort' of 'list' objects}
         5    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
      1411    0.000    0.000    0.000    0.000 {method 'startswith' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'to_bytes' of 'int' objects}
         5    0.000    0.000    0.000    0.000 {method 'translate' of 'bytearray' objects}
         1    0.000    0.000    0.000    0.000 {method 'union' of 'set' objects}
       792    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
        36    0.000    0.000    0.000    0.000 {method 'upper' of 'str' objects}
         3    0.000    0.000    0.000    0.000 {method 'values' of 'dict' objects}
         8    0.000    0.000    0.000    0.000 {method 'write' of '_io.BytesIO' objects}
+        1    0.000    0.000    0.000    0.000 {method 'write' of '_io.FileIO' objects}
 
 
