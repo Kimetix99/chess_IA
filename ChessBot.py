@@ -33,9 +33,10 @@ class ChessBot:
             pices = current_board.black_pices
         random.seed(datetime.now())
         moves = pices[random.randint(0,len(pices)-1)].get_possible_moves(current_board.board)
-        if moves:
-            move = moves[random.randint(0,len(moves)-1)]
-            current_board.movePice(move)
+        while moves==[]:
+            moves = pices[random.randint(0,len(pices)-1)].get_possible_moves(current_board.board)
+        move = moves[random.randint(0,len(moves)-1)]
+        current_board.movePice(move)
         return current_board
 
     def bot_move(self):
