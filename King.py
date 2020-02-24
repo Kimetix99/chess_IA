@@ -1,3 +1,4 @@
+#!/usr/bin/pypy
 from Pice import Pice
 from Move import Move
 from Tower import Tower

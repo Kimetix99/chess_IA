@@ -1,3 +1,4 @@
+#!/usr/bin/pypy
 from Board import *
 from Chess import *
 from Player import *

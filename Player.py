@@ -1,3 +1,4 @@
+#!/usr/bin/pypy
 class Player:
 
     def __init__ (self, PlayerID, side):

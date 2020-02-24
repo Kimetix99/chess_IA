@@ -1,3 +1,4 @@
+#!/usr/bin/pypy
 from tkinter import *
 from Board import *
 from Game import *

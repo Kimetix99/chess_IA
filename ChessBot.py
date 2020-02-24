@@ -1,3 +1,4 @@
+#!/usr/bin/pypy
 import copy
 import random
 from datetime import datetime
