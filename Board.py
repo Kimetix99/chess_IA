@@ -1,4 +1,3 @@
-#!/usr/bin/pypy
 from tkinter import *
 from Pice import Pice
 from Tower import Tower

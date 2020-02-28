@@ -1,4 +1,3 @@
-#!/usr/bin/pypy
 class Pice:
 
     def __init__(self,id,side,figure,alive,posY,posX):
