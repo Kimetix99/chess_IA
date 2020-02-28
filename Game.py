@@ -31,6 +31,8 @@ class Game:
             else:
                 self.clean_board_moves()
             self.reset_board()
+        if self.check_end_of_game():
+            self.chess.window.destroy()
         if self.turn.equals(self.player2):
             chessboot = ChessBot(self.board)
             self.board=chessboot.bot_move()

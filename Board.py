@@ -85,7 +85,10 @@ class Board:
         
     def replace_pice(self, move):
         if self.pawn_reaches_final(move):
-            self.board[move.origin[1]][move.origin[0]]['p'] = Queen("queen", self.board[move.origin[1]][move.origin[0]]['p'].side, PhotoImage(file="./img/"+self.board[move.origin[1]][move.origin[0]]['p'].side+"_q.gif"),True,move.origin[1],move.origin[0])
+            self.white_pices.remove(self.board[move.origin[1]][move.origin[0]]['p'])
+            newQueen = Queen("queen", self.board[move.origin[1]][move.origin[0]]['p'].side, "./img/"+self.board[move.origin[1]][move.origin[0]]['p'].side+"_q.gif",True,move.origin[1],move.origin[0])
+            self.board[move.origin[1]][move.origin[0]]['p'] = newQueen
+            self.white_pices.append(newQueen)
         if self.king_dies(move):
             if self.is_white_king(move):
                 self.white_king_alive = False
