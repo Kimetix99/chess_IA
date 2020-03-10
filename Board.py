@@ -54,6 +54,7 @@ class Board:
             else:
                 self.kill_pice(move)
                 self.replace_pice(move)
+                self.check_init_pos(move)
         
     def kill_pice(self, move):
         if self.board[move.destination[1]][move.destination[0]]['p'].side == 'black':
@@ -84,7 +85,10 @@ class Board:
         
     def replace_pice(self, move):
         if self.pawn_reaches_final(move):
-            self.white_pices.remove(self.board[move.origin[1]][move.origin[0]]['p'])
+            if self.is_white_pice(move):
+                self.white_pices.remove(self.board[move.origin[1]][move.origin[0]]['p'])
+            else:
+                self.black_pices.remove(self.board[move.origin[1]][move.origin[0]]['p'])
             newQueen = Queen("queen", self.board[move.origin[1]][move.origin[0]]['p'].side, "./img/"+self.board[move.origin[1]][move.origin[0]]['p'].side+"_q.gif",True,move.origin[1],move.origin[0])
             self.board[move.origin[1]][move.origin[0]]['p'] = newQueen
             self.white_pices.append(newQueen)
@@ -97,6 +101,9 @@ class Board:
         self.board[move.destination[1]][move.destination[0]]['p'].posX=move.destination[0]
         self.board[move.destination[1]][move.destination[0]]['p'].posY=move.destination[1]
         self.board[move.origin[1]][move.origin[0]]['p'] = ''
+
+    def is_white_pice(self, move):
+        return self.board[move.origin[1]][move.origin[0]]['p'] != '' and self.board[move.origin[1]][move.origin[0]]['p'].side == 'white'
 
     def pawn_reaches_final(self, move):
         return ((move.destination[1] == 7 and isinstance(self.board[move.origin[1]][move.origin[0]]['p'],Pawn) and self.board[move.origin[1]][move.origin[0]]['p'].side == 'black') 
