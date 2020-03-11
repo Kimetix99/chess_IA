@@ -37,7 +37,6 @@ class ChessBot:
             moves = pices[random.randint(0,len(pices)-1)].get_possible_moves(current_board.board)
         move = moves[random.randint(0,len(moves)-1)]
         current_board.movePice(move)
-        print(move.origin)
         return current_board
 
     def bot_move(self):
@@ -56,9 +55,6 @@ class ChessBot:
         for p in processes:
             p.join()
         results = [output.get() for p in processes]
-        for result in results:
-            print(result.value)
-        print('----------------------------------------------')
         return min(results, key = lambda t: t.value).board
 
     def minimax(self, depth, maxTurn, board, alpha, beta):
