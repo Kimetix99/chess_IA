@@ -6,9 +6,9 @@ Chess Software with an AI to play against.
 
 The following algorithms have been used to perform this Artificial Intelligence:
 
-⋅⋅* Minimax
-⋅⋅* Alpha-Beta Pruning
-⋅⋅* Neightboor Search
+* Minimax
+* Alpha-Beta Pruning
+* Neightboor Search
 
 ## Explanation
 
