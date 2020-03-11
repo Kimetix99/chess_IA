@@ -4,7 +4,7 @@ Chess Software with an AI to play against.
 
 ## Usage
 
-python Chess.py
+$ python Chess.py
 
 ## Technics
 
