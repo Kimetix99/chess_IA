@@ -2,6 +2,10 @@
 
 Chess Software with an AI to play against.
 
+## Usage
+
+python Chess.py
+
 ## Technics
 
 The following algorithms have been used to perform this Artificial Intelligence:
