@@ -87,11 +87,14 @@ class Board:
         if self.pawn_reaches_final(move):
             if self.is_white_pice(move):
                 self.white_pices.remove(self.board[move.origin[1]][move.origin[0]]['p'])
+                newQueen = Queen("queen", "white", "./img/white_q.gif",True,move.origin[1],move.origin[0])
+                self.board[move.origin[1]][move.origin[0]]['p'] = newQueen
+                self.white_pices.append(newQueen)
             else:
                 self.black_pices.remove(self.board[move.origin[1]][move.origin[0]]['p'])
-            newQueen = Queen("queen", self.board[move.origin[1]][move.origin[0]]['p'].side, "./img/"+self.board[move.origin[1]][move.origin[0]]['p'].side+"_q.gif",True,move.origin[1],move.origin[0])
-            self.board[move.origin[1]][move.origin[0]]['p'] = newQueen
-            self.white_pices.append(newQueen)
+                newQueen = Queen("queen", "black", "./img/black_q.gif",True,move.origin[1],move.origin[0])
+                self.board[move.origin[1]][move.origin[0]]['p'] = newQueen
+                self.white_pices.append(newQueen)
         if self.king_dies(move):
             if self.is_white_king(move):
                 self.white_king_alive = False
@@ -123,19 +126,3 @@ class Board:
             return math.ceil((move.origin[0]+move.destination[0])/2)
         else:
             return math.ceil((move.origin[0]+move.destination[0])/2)
-    
-    def get_black_pices(self):
-        black_pices=[]
-        for row in self.board:
-            for cell in row:
-                if cell['p'] != '' and cell['p'].side=='black':
-                    black_pices.append(cell)
-        return black_pices
-    
-    def get_white_pices(self):
-        white_pices=[]
-        for row in self.board:
-            for cell in row:
-                if cell['p'] != '' and cell['p'].side=='white':
-                    white_pices.append(cell)
-        return white_pices

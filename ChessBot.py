@@ -44,7 +44,6 @@ class ChessBot:
         for j in range(self.RAMIFICATION_FACTOR):
             neightbor=self.get_neightbor(self.board,'black')
             boards.append(self.Node(neightbor,self.minimax(3, True, neightbor, -sys.maxsize, sys.maxsize)))
-        print(max(boards, key = lambda t: t.value).value) 
         return max(boards, key = lambda t: t.value).board
 
     def minimax(self, depth, maxTurn, board, alpha, beta):
