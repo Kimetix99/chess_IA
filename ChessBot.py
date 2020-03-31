@@ -9,7 +9,7 @@ class ChessBot:
 
     def __init__(self,board):
         self.board = board
-        self.RAMIFICATION_FACTOR = 50
+        self.RAMIFICATION_FACTOR = 15
         self.NUM_THREADS = 4
 
     class Node:
@@ -20,9 +20,9 @@ class ChessBot:
     def evaluation(self, board):
         value = 0
         for pice in self.board.white_pices:
-            value += pice.value
-        for pice in self.board.black_pices:
             value -= pice.value
+        for pice in self.board.black_pices:
+            value += pice.value
         return value
 
     def get_neightbor(self, new_board, side):
@@ -40,22 +40,12 @@ class ChessBot:
         return current_board
 
     def bot_move(self):
-        output = mp.Queue()
-        
-        def move_conc(output): 
-            boards=[]  
-            for j in range(self.RAMIFICATION_FACTOR):
-                neightbor=self.get_neightbor(self.board,'black')
-                boards.append(self.Node(neightbor,self.minimax(2, False, neightbor, -sys.maxsize, sys.maxsize)))
-            output.put(min(boards, key = lambda t: t.value))
-        
-        processes=[mp.Process(target=move_conc, args=(output,), daemon = True) for i in range(self.NUM_THREADS)]
-        for p in processes:
-            p.start()
-        for p in processes:
-            p.join()
-        results = [output.get() for p in processes]
-        return min(results, key = lambda t: t.value).board
+        boards=[]
+        for j in range(self.RAMIFICATION_FACTOR):
+            neightbor=self.get_neightbor(self.board,'black')
+            boards.append(self.Node(neightbor,self.minimax(3, True, neightbor, -sys.maxsize, sys.maxsize)))
+        print(max(boards, key = lambda t: t.value).value) 
+        return max(boards, key = lambda t: t.value).board
 
     def minimax(self, depth, maxTurn, board, alpha, beta):
         current_board = copy.deepcopy(board)
