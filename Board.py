@@ -13,14 +13,14 @@ class Board:
 
     def __init__(self):
         self.board=[
-            [{"p":Tower("tower","black","./img/black_t.gif",True,0,0),"m":""},{"p":Horse("horse","black","./img/black_h.gif",True,0,1),"m":""},{"p":Bishop("bishop","black","./img/black_b.gif",True,0,2),"m":""},{"p":Queen("queen", "black","./img/black_q.gif",True,0,3),"m":""},{"p":King("king","black","./img/black_k.gif",True,0,4),"m":""},{"p":Bishop("bishop","black","./img/black_b.gif",True,0,5),"m":""},{"p":Horse("horse","black","./img/black_h.gif",True,0,6),"m":""},{"p":Tower("tower","black","./img/black_t.gif",True,0,7),"m":""}],
-            [{"p":Pawn("pawn","black","./img/black_p.gif",True,1,0),"m":""},{"p":Pawn("pawn","black","./img/black_p.gif",True,1,1),"m":""},{"p":Pawn("pawn","black","./img/black_p.gif",True,1,2),"m":""},{"p":Pawn("pawn","black","./img/black_p.gif",True,1,3),"m":""},{"p":Pawn("pawn","black","./img/black_p.gif",True,1,4),"m":""},{"p":Pawn("pawn","black","./img/black_p.gif",True,1,5),"m":""},{"p":Pawn("pawn","black","./img/black_p.gif",True,1,6),"m":""},{"p":Pawn("pawn","black","./img/black_p.gif",True,1,7),"m":""}],
+            [{"p":Tower("tower","black","./img/black_t.png",True,0,0),"m":""},{"p":Horse("horse","black","./img/black_h.png",True,0,1),"m":""},{"p":Bishop("bishop","black","./img/black_b.png",True,0,2),"m":""},{"p":Queen("queen", "black","./img/black_q.png",True,0,3),"m":""},{"p":King("king","black","./img/black_k.png",True,0,4),"m":""},{"p":Bishop("bishop","black","./img/black_b.png",True,0,5),"m":""},{"p":Horse("horse","black","./img/black_h.png",True,0,6),"m":""},{"p":Tower("tower","black","./img/black_t.png",True,0,7),"m":""}],
+            [{"p":Pawn("pawn","black","./img/black_p.png",True,1,0),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,1),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,2),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,3),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,4),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,5),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,6),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,7),"m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
-            [{"p":Pawn("pawn","white","./img/white_p.gif",True,6,0),"m":""},{"p":Pawn("pawn","white","./img/white_p.gif",True,6,1),"m":""},{"p":Pawn("pawn","white","./img/white_p.gif",True,6,2),"m":""},{"p":Pawn("pawn","white","./img/white_p.gif",True,6,3),"m":""},{"p":Pawn("pawn","white","./img/white_p.gif",True,6,4),"m":""},{"p":Pawn("pawn","white","./img/white_p.gif",True,6,5),"m":""},{"p":Pawn("pawn","white","./img/white_p.gif",True,6,6),"m":""},{"p":Pawn("pawn","white","./img/white_p.gif",True,6,7),"m":""}],
-            [{"p":Tower("tower","white","./img/white_t.gif",True,7,0),"m":""},{"p":Horse("horse","white","./img/white_h.gif",True,7,1),"m":""},{"p":Bishop("bishop","white","./img/white_b.gif",True,7,2),"m":""},{"p":Queen("queen", "white","./img/white_q.gif",True,7,3),"m":""},{"p":King("king","white","./img/white_k.gif",True,7,4),"m":""},{"p":Bishop("bishop","white","./img/white_b.gif",True,7,5),"m":""},{"p":Horse("horse","white","./img/white_h.gif",True,7,6),"m":""},{"p":Tower("tower","white","./img/white_t.gif",True,7,7),"m":""}]
+            [{"p":Pawn("pawn","white","./img/white_p.png",True,6,0),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,1),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,2),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,3),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,4),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,5),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,6),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,7),"m":""}],
+            [{"p":Tower("tower","white","./img/white_t.png",True,7,0),"m":""},{"p":Horse("horse","white","./img/white_h.png",True,7,1),"m":""},{"p":Bishop("bishop","white","./img/white_b.png",True,7,2),"m":""},{"p":Queen("queen", "white","./img/white_q.png",True,7,3),"m":""},{"p":King("king","white","./img/white_k.png",True,7,4),"m":""},{"p":Bishop("bishop","white","./img/white_b.png",True,7,5),"m":""},{"p":Horse("horse","white","./img/white_h.png",True,7,6),"m":""},{"p":Tower("tower","white","./img/white_t.png",True,7,7),"m":""}]
         ]
         self.black_pices=[]
         top_side=self.board[0] + self.board[1]
@@ -87,12 +87,12 @@ class Board:
         if self.pawn_reaches_final(move):
             if self.is_white_pice(move):
                 self.white_pices.remove(self.board[move.origin[1]][move.origin[0]]['p'])
-                newQueen = Queen("queen", "white", "./img/white_q.gif",True,move.origin[1],move.origin[0])
+                newQueen = Queen("queen", "white", "./img/white_q.png",True,move.origin[1],move.origin[0])
                 self.board[move.origin[1]][move.origin[0]]['p'] = newQueen
                 self.white_pices.append(newQueen)
             else:
                 self.black_pices.remove(self.board[move.origin[1]][move.origin[0]]['p'])
-                newQueen = Queen("queen", "black", "./img/black_q.gif",True,move.origin[1],move.origin[0])
+                newQueen = Queen("queen", "black", "./img/black_q.png",True,move.origin[1],move.origin[0])
                 self.board[move.origin[1]][move.origin[0]]['p'] = newQueen
                 self.white_pices.append(newQueen)
         if self.king_dies(move):

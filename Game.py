@@ -11,6 +11,7 @@ class Game:
         self.player1 = Player('1','white')
         self.player2 = Player('2','black')
         self.turn = self.player1
+        self.chessboot = ChessBot(self.board)
 
     def start_game(self):
         self.chess.board.bind("<Button-1>", self.click_handler)
@@ -33,8 +34,8 @@ class Game:
         if self.check_end_of_game():
             self.chess.window.destroy()
         if self.turn.equals(self.player2):
-            chessboot = ChessBot(self.board)
-            self.board=chessboot.bot_move()
+            self.chessboot.set_board(self.board)
+            self.board=self.chessboot.bot_move()
             self.changeTurn()
             self.reset_board()
         if self.check_end_of_game():

@@ -40,11 +40,22 @@ class ChessBot:
         return current_board
 
     def bot_move(self):
-        boards=[]
-        for j in range(self.RAMIFICATION_FACTOR):
-            neightbor=self.get_neightbor(self.board,'black')
-            boards.append(self.Node(neightbor,self.minimax(3, True, neightbor, -sys.maxsize, sys.maxsize)))
-        return max(boards, key = lambda t: t.value).board
+        output = mp.Queue()
+
+        def move_conc(output):
+            boards=[]
+            for j in range(self.RAMIFICATION_FACTOR):
+                neightbor=self.get_neightbor(self.board,'black')
+                boards.append(self.Node(neightbor,self.minimax(3, True, neightbor, -sys.maxsize, sys.maxsize)))
+            output.put(max(boards, key = lambda t: t.value))
+
+        processes=[mp.Process(target=move_conc, args=(output,), daemon = True) for i in range(self.NUM_THREADS)]
+        for p in processes:
+            p.start()
+        for p in processes:
+            p.join()
+        results = [output.get() for p in processes]
+        return max(results, key = lambda t: t.value).board
 
     def minimax(self, depth, maxTurn, board, alpha, beta):
         current_board = copy.deepcopy(board)
@@ -68,3 +79,6 @@ class ChessBot:
                 if beta <= alpha:
                     break
             return minEval
+    
+    def set_board(self, board):
+        self.board=board
