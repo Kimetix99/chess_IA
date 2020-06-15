@@ -3,6 +3,7 @@ from Board import *
 from Game import *
 from ChessBot import *
 import math 
+import sys
 
 
 class Chess:
@@ -76,12 +77,16 @@ class Chess:
         
 
 if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Ussage: python3 Chess.py <Game Mode>")
+        print("Game Mode {<1> : 2 Players, <2> : Player vs IA} ")
+        exit(0)
     window = Tk()
     window.title("Chess")
     chess = Chess(window)
     chess.create_board()
     board = Board()
     chess.display_pices(board)
-    game=Game(chess,board)
+    game=Game(chess,board, sys.argv[1])
     game.start_game()
     window.mainloop()
