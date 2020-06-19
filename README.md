@@ -4,7 +4,9 @@ Chess Software with an AI to play against.
 
 ## Usage
 
-$ python Chess.py
+$ python Chess.py <game_mode>
+* game_mode = 1: 2 Player
+* game_mode = 2: Player vs AI 
 
 ## Technics
 
