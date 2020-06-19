@@ -1,26 +1,21 @@
-from tkinter import *
-from Pice import Pice
-from Tower import Tower
-from Bishop import Bishop
-from Pawn import Pawn
-from King import King
-from Queen import Queen
-from Horse import Horse
-from Move import Move
+from Pices.BlackPiceFactory import BlackPiceFactory
+from Pices.WhitePiceFactory import WhitePiceFactory
 import math
 
 class Board:
 
     def __init__(self):
+        self.black_factory = BlackPiceFactory()
+        self.white_factory = WhitePiceFactory()
         self.board=[
-            [{"p":Tower("tower","black","./img/black_t.png",True,0,0),"m":""},{"p":Horse("horse","black","./img/black_h.png",True,0,1),"m":""},{"p":Bishop("bishop","black","./img/black_b.png",True,0,2),"m":""},{"p":Queen("queen", "black","./img/black_q.png",True,0,3),"m":""},{"p":King("king","black","./img/black_k.png",True,0,4),"m":""},{"p":Bishop("bishop","black","./img/black_b.png",True,0,5),"m":""},{"p":Horse("horse","black","./img/black_h.png",True,0,6),"m":""},{"p":Tower("tower","black","./img/black_t.png",True,0,7),"m":""}],
-            [{"p":Pawn("pawn","black","./img/black_p.png",True,1,0),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,1),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,2),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,3),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,4),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,5),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,6),"m":""},{"p":Pawn("pawn","black","./img/black_p.png",True,1,7),"m":""}],
+            [{"p":self.black_factory.create_tower(0,0),"m":""},{"p":self.black_factory.create_horse(0,1),"m":""},{"p":self.black_factory.create_bishop(0,2),"m":""},{"p":self.black_factory.create_queen(0,3),"m":""},{"p":self.black_factory.create_king(0,4),"m":""},{"p":self.black_factory.create_bishop(0,5),"m":""},{"p":self.black_factory.create_horse(0,6),"m":""},{"p":self.black_factory.create_tower(0,7),"m":""}],
+            [{"p":self.black_factory.create_pawn(1,0),"m":""},{"p":self.black_factory.create_pawn(1,1),"m":""},{"p":self.black_factory.create_pawn(1,2),"m":""},{"p":self.black_factory.create_pawn(1,3),"m":""},{"p":self.black_factory.create_pawn(1,4),"m":""},{"p":self.black_factory.create_pawn(1,5),"m":""},{"p":self.black_factory.create_pawn(1,6),"m":""},{"p":self.black_factory.create_pawn(1,7),"m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
             [{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""},{"p":"","m":""}],
-            [{"p":Pawn("pawn","white","./img/white_p.png",True,6,0),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,1),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,2),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,3),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,4),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,5),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,6),"m":""},{"p":Pawn("pawn","white","./img/white_p.png",True,6,7),"m":""}],
-            [{"p":Tower("tower","white","./img/white_t.png",True,7,0),"m":""},{"p":Horse("horse","white","./img/white_h.png",True,7,1),"m":""},{"p":Bishop("bishop","white","./img/white_b.png",True,7,2),"m":""},{"p":Queen("queen", "white","./img/white_q.png",True,7,3),"m":""},{"p":King("king","white","./img/white_k.png",True,7,4),"m":""},{"p":Bishop("bishop","white","./img/white_b.png",True,7,5),"m":""},{"p":Horse("horse","white","./img/white_h.png",True,7,6),"m":""},{"p":Tower("tower","white","./img/white_t.png",True,7,7),"m":""}]
+            [{"p":self.white_factory.create_pawn(6,0),"m":""},{"p":self.white_factory.create_pawn(6,1),"m":""},{"p":self.white_factory.create_pawn(6,2),"m":""},{"p":self.white_factory.create_pawn(6,3),"m":""},{"p":self.white_factory.create_pawn(6,4),"m":""},{"p":self.white_factory.create_pawn(6,5),"m":""},{"p":self.white_factory.create_pawn(6,6),"m":""},{"p":self.white_factory.create_pawn(6,7),"m":""}],
+            [{"p":self.white_factory.create_tower(7,0),"m":""},{"p":self.white_factory.create_horse(7,1),"m":""},{"p":self.white_factory.create_bishop(7,2),"m":""},{"p":self.white_factory.create_queen(7,3),"m":""},{"p":self.white_factory.create_king(7,4),"m":""},{"p":self.white_factory.create_bishop(7,5),"m":""},{"p":self.white_factory.create_horse(7,6),"m":""},{"p":self.white_factory.create_tower(7,7),"m":""}]
         ]
         self.black_pices=[]
         top_side=self.board[0] + self.board[1]
@@ -63,7 +58,7 @@ class Board:
             self.white_pices.remove(self.board[move.destination[1]][move.destination[0]]['p'])
 
     def check_init_pos(self, move):
-        if isinstance(self.board[move.destination[1]][move.destination[0]]['p'],Pawn) or isinstance(self.board[move.destination[1]][move.destination[0]]['p'],Tower) or isinstance(self.board[move.destination[1]][move.destination[0]]['p'],King):
+        if self.board[move.destination[1]][move.destination[0]]['p'].is_pawn() or self.board[move.destination[1]][move.destination[0]]['p'].is_tower() or self.board[move.destination[1]][move.destination[0]]['p'].is_king():
             if self.board[move.destination[1]][move.destination[0]]['p'].init_pos:
                 self.board[move.destination[1]][move.destination[0]]['p'].init_pos = False
 
@@ -87,12 +82,12 @@ class Board:
         if self.pawn_reaches_final(move):
             if self.is_white_pice(move):
                 self.white_pices.remove(self.board[move.origin[1]][move.origin[0]]['p'])
-                newQueen = Queen("queen", "white", "./img/white_q.png",True,move.origin[1],move.origin[0])
+                newQueen = self.white_factory.create_queen(move.origin[1],move.origin[0])
                 self.board[move.origin[1]][move.origin[0]]['p'] = newQueen
                 self.white_pices.append(newQueen)
             else:
                 self.black_pices.remove(self.board[move.origin[1]][move.origin[0]]['p'])
-                newQueen = Queen("queen", "black", "./img/black_q.png",True,move.origin[1],move.origin[0])
+                newQueen = self.black_factory.create_queen(move.origin[1],move.origin[0])
                 self.board[move.origin[1]][move.origin[0]]['p'] = newQueen
                 self.white_pices.append(newQueen)
         if self.king_dies(move):
@@ -109,14 +104,14 @@ class Board:
         return self.board[move.origin[1]][move.origin[0]]['p'] != '' and self.board[move.origin[1]][move.origin[0]]['p'].side == 'white'
 
     def pawn_reaches_final(self, move):
-        return ((move.destination[1] == 7 and isinstance(self.board[move.origin[1]][move.origin[0]]['p'],Pawn) and self.board[move.origin[1]][move.origin[0]]['p'].side == 'black') 
-                or (move.destination[1] == 0 and isinstance(self.board[move.origin[1]][move.origin[0]]['p'],Pawn) and self.board[move.origin[1]][move.origin[0]]['p'].side == 'white'))
+        return ((move.destination[1] == 7 and self.board[move.origin[1]][move.origin[0]]['p'].is_pawn() and self.board[move.origin[1]][move.origin[0]]['p'].side == 'black')
+                or (move.destination[1] == 0 and self.board[move.origin[1]][move.origin[0]]['p'].is_pawn() and self.board[move.origin[1]][move.origin[0]]['p'].side == 'white'))
 
     def check_kings_alive(self):
         return self.black_king_alive and self.white_king_alive
 
     def king_dies(self, move):
-        return isinstance(self.board[move.destination[1]][move.destination[0]]['p'], King)
+        return self.board[move.destination[1]][move.destination[0]]['p'] != '' and self.board[move.destination[1]][move.destination[0]]['p'].is_king()
 
     def is_white_king(self, move):
         return self.board[move.destination[1]][move.destination[0]]['p'].side == 'white'

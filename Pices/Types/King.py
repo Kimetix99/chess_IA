@@ -1,7 +1,7 @@
-from Pice import Pice
-from Move import Move
-from Tower import Tower
+from Pices.Pice import Pice
+from Utils.Move import Move
 import sys
+
 
 class King(Pice):
     
@@ -109,13 +109,15 @@ class King(Pice):
         next_posX = self.posX-1
         while next_posX >=0 and board[self.posY][next_posX]['p'] == '':
             next_posX-=1
-        if next_posX >= 0 and isinstance(board[self.posY][next_posX]['p'],Tower) and board[self.posY][next_posX]['p'].init_pos and board[self.posY][self.posX]['p'].init_pos:
+        if next_posX >= 0 and board[self.posY][next_posX]['p'] != '' and board[self.posY][next_posX]['p'].is_tower() and board[self.posY][next_posX]['p'].init_pos and board[self.posY][self.posX]['p'].init_pos:
             moves.append(Move((self.posX,self.posY),(next_posX,self.posY),True))
     
     def enrock_right_tower(self, moves, board):
         next_posX = self.posX+1
         while next_posX <= 7 and board[self.posY][next_posX]['p'] == '':
             next_posX+=1
-        if next_posX <= 7 and isinstance(board[self.posY][next_posX]['p'],Tower) and board[self.posY][next_posX]['p'].init_pos and board[self.posY][self.posX]['p'].init_pos:
+        if next_posX <= 7 and board[self.posY][next_posX]['p'] != '' and board[self.posY][next_posX]['p'].is_tower() and board[self.posY][next_posX]['p'].init_pos and board[self.posY][self.posX]['p'].init_pos:
             moves.append(Move((self.posX,self.posY),(next_posX,self.posY),True))
-                 
+
+    def is_king(self):
+        return True

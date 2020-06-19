@@ -1,5 +1,5 @@
-from Pice import Pice
-from Move import Move
+from Pices.Pice import Pice
+from Utils.Move import Move
 
 class Queen(Pice):
     

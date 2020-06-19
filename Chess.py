@@ -1,9 +1,8 @@
 from tkinter import *
 from Board import *
-from Game import *
-from ChessBot import *
-import math 
+import math
 import sys
+from Game import Game
 
 
 class Chess:

@@ -1,7 +1,5 @@
-from Board import *
-from Chess import *
-from Player import *
-from ChessBot import *
+from Utils.Player import *
+from AI.ChessBot import *
 
 class Game:
 

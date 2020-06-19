@@ -1,5 +1,5 @@
-from Pice import Pice
-from Move import Move
+from Pices.Pice import Pice
+from Utils.Move import Move
 
 class Pawn(Pice):
     
@@ -47,3 +47,6 @@ class Pawn(Pice):
     
     def in_board(self, board):
         return self.check_side(1) <= 7 and self.check_side(1)>=0
+
+    def is_pawn(self):
+        return True

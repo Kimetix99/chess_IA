@@ -1,5 +1,5 @@
-from Pice import Pice
-from Move import Move
+from Pices.Pice import Pice
+from Utils.Move import Move
 
 class Tower(Pice):
         
@@ -47,3 +47,6 @@ class Tower(Pice):
             next_posY+=1
         if next_posY <= 7 and board[next_posY][self.posX]['p'] != '' and board[next_posY][self.posX]['p'].side != self.side:
             moves.append(Move((self.posX,self.posY),(self.posX,next_posY),False))
+
+    def is_tower(self):
+        return True
