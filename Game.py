@@ -1,5 +1,5 @@
 from Utils.Player import *
-from AI.ChessBot import *
+from AI.MinMaxLocalSearch import *
 
 class Game:
 
@@ -10,7 +10,7 @@ class Game:
         self.player1 = Player('1','white')
         self.player2 = Player('2','black')
         self.turn = self.player1
-        self.chessboot = ChessBot(self.board)
+        self.chessboot = MinMaxLocalSearch()
 
     def start_game(self):
         if self.gamemode == "1":
@@ -39,8 +39,7 @@ class Game:
         if self.check_end_of_game():
             self.chess.window.destroy()
         if self.turn.equals(self.player2):
-            self.chessboot.set_board(self.board)
-            self.board=self.chessboot.bot_move()
+            self.board=self.chessboot.bot_move(self.board)
             self.changeTurn()
             self.reset_board()
         if self.check_end_of_game():

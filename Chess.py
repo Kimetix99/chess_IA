@@ -86,6 +86,6 @@ if __name__ == "__main__":
     chess.create_board()
     board = Board()
     chess.display_pices(board)
-    game=Game(chess,board, sys.argv[1])
+    game=Game(chess, board, sys.argv[1])
     game.start_game()
     window.mainloop()

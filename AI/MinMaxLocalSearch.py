@@ -4,11 +4,10 @@ from datetime import datetime
 import sys
 import multiprocessing as mp
 
+#Refactor, fer una clase abstracta amb mètode bot_move i eliminar el board del constructor, no cal.
+class MinMaxLocalSearch:
 
-class ChessBot:
-
-    def __init__(self,board):
-        self.board = board
+    def __init__(self):
         self.RAMIFICATION_FACTOR = 15
         self.NUM_THREADS = 4
 
@@ -19,9 +18,9 @@ class ChessBot:
 
     def evaluation(self, board):
         value = 0
-        for pice in self.board.white_pices:
+        for pice in board.white_pices:
             value -= pice.value
-        for pice in self.board.black_pices:
+        for pice in board.black_pices:
             value += pice.value
         return value
 
@@ -39,17 +38,17 @@ class ChessBot:
         current_board.movePice(move)
         return current_board
 
-    def bot_move(self):
+    def bot_move(self, board):
         output = mp.Queue()
 
-        def move_conc(output):
+        def move_conc(output, board):
             boards=[]
             for j in range(self.RAMIFICATION_FACTOR):
-                neightbor=self.get_neightbor(self.board,'black')
+                neightbor=self.get_neightbor(board,'black')
                 boards.append(self.Node(neightbor,self.minimax(3, True, neightbor, -sys.maxsize, sys.maxsize)))
             output.put(max(boards, key = lambda t: t.value))
 
-        processes=[mp.Process(target=move_conc, args=(output,), daemon = True) for i in range(self.NUM_THREADS)]
+        processes=[mp.Process(target=move_conc, args=(output,board,), daemon = True) for i in range(self.NUM_THREADS)]
         for p in processes:
             p.start()
         for p in processes:
@@ -60,7 +59,7 @@ class ChessBot:
     def minimax(self, depth, maxTurn, board, alpha, beta):
         current_board = copy.deepcopy(board)
         if depth == 0 or not current_board.check_kings_alive():
-            return self.evaluation(current_board.board)
+            return self.evaluation(current_board)
         if maxTurn:
             maxEval = -sys.maxsize
             for i in range(self.RAMIFICATION_FACTOR):
@@ -79,6 +78,3 @@ class ChessBot:
                 if beta <= alpha:
                     break
             return minEval
-    
-    def set_board(self, board):
-        self.board=board
