@@ -1,6 +1,6 @@
 # Chess_IA
 
-Chess Software with an AI to play against.
+Chess Software with a basic AI to play against. This project can be used as a Playground for developing AI's to play against.
 
 ## Usage
 
